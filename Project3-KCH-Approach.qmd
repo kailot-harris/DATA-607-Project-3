@@ -1,0 +1,61 @@
+---
+title: "DATA 607 - Project 3 - Approach"
+author: "Kailot C. Harris, Dillon Leeper, Esra Dogan, Nick Weiner"
+date: "2026/10/12"
+format:
+  html:
+    code-overflow: wrap
+editor: visual
+theme:
+  dark: darkly
+  light: flatly
+---
+
+# Introduction and Overview
+
+### Collaboration Tools
+
+- Github
+
+- Slack
+
+- Zoom
+
+### Collaboration Architecture
+
+- Build web scraping
+
+- Data tidying and unification
+
+- Analysis + Visualization
+
+- Integrate Report
+
+### Data sources
+
+- scrape from linkedin
+
+- scrape from indeed
+
+- alternative sources
+
+  - Discovery: will determine en route
+
+- Outside list: top 5 skills article
+
+  - Bucket the job requirements
+
+### Anticipated Challenges
+
+- Merging edits to a central R document
+
+- Unifying schema between
+
+# Team Name Ideas
+
+- 
+
+# Approach
+
+1.  
+2.  
