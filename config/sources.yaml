@@ -1,0 +1,74 @@
+# Per-source config for the fetch/health-check layer.
+# rate_limit_sec = minimum seconds between two requests to this source.
+# required_fields = raw-API field names that must be present on a sample
+#   record for the source to be considered "transmitting what we need"
+#   (checked pre-parse, against the live shape confirmed on 2026-10-12).
+
+contact_email: kailot.harris82@login.cuny.edu
+
+sources:
+  remoteok:
+    enabled: true
+    access_type: api_json
+    base_url: https://remoteok.com/api
+    rate_limit_sec: 2.0
+    requires_key: false
+    required_fields: [id, position, company, tags, url, date, location]
+
+  arbeitnow:
+    enabled: true
+    access_type: api_json
+    base_url: https://www.arbeitnow.com/api/job-board-api
+    rate_limit_sec: 1.0
+    requires_key: false
+    required_fields: [slug, title, company_name, tags, url, created_at, location]
+
+  jobicy:
+    enabled: true
+    access_type: api_json
+    base_url: https://jobicy.com/api/v2/remote-jobs
+    rate_limit_sec: 1.0
+    requires_key: false
+    required_fields: [id, jobTitle, companyName, jobGeo, url, pubDate]
+
+  himalayas:
+    enabled: true
+    access_type: api_json
+    base_url: https://himalayas.app/jobs/api
+    rate_limit_sec: 1.0
+    requires_key: false
+    required_fields: [title, companyName, guid, pubDate, categories, applicationLink]
+
+  wwr:
+    enabled: true
+    access_type: rss
+    base_url: https://weworkremotely.com/categories/remote-programming-jobs.rss
+    rate_limit_sec: 2.0
+    requires_key: false
+    required_fields: [title, link, summary, tags, region]
+
+  hn_hiring:
+    enabled: true
+    access_type: algolia
+    base_url: https://hn.algolia.com/api/v1/search_by_date
+    rate_limit_sec: 1.0
+    requires_key: false
+    required_fields: [objectID, author, created_at, comment_text]
+
+  adzuna:
+    enabled: true
+    access_type: api_json
+    base_url: https://api.adzuna.com/v1/api/jobs/us/search/1
+    rate_limit_sec: 1.0
+    requires_key: true
+    credential_env: [ADZUNA_APP_ID, ADZUNA_APP_KEY]
+    required_fields: [id, title, company, location, redirect_url, created]
+
+  usajobs:
+    enabled: true
+    access_type: api_json
+    base_url: https://data.usajobs.gov/api/search
+    rate_limit_sec: 1.0
+    requires_key: true
+    credential_env: [USAJOBS_API_KEY, USAJOBS_EMAIL]
+    required_fields: [PositionID, PositionTitle, PositionURI, PublicationStartDate]
