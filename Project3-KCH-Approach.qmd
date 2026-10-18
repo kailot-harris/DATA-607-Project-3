@@ -1,9 +1,11 @@
 ---
 title: "DATA 607 - Project 3 - Approach"
-author: "Kailot C. Harris, Dillon Leeper, Esra Dogan, Nick Weiner"
+author: "Quarto Pounders with Cheese: Kailot C. Harris, Dillon Leeper, Esra Dogan, Nick Weiner"
 date: "2026/10/12"
 format:
   html:
+    toc: true
+    code-fold: true
     code-overflow: wrap
 editor: visual
 theme:
@@ -13,49 +15,78 @@ theme:
 
 # Introduction and Overview
 
-### Collaboration Tools
+## Research Question
 
-- Github
+Which data science skills are most valued? We will treat this as an exploratory analysis, using job postings as our proxy for skill demand.
 
-- Slack
+## **Collaboration**
 
-- Zoom
+We will use GitHub for code, data, and the report, Slack for daily communication, and Zoom for meetings. Each member leads one part of the project, but we work closely together and consult each other at every stage.
 
-### Collaboration Architecture
+•  Data acquisition: Kailot
 
-- Build web scraping
+•  Data import and tidying in R: Esra
 
-- Data tidying and unification
+•  Analysis and visualization: Dillon
 
-- Analysis + Visualization
+•  Integration and findings: Nick
 
-- Integrate Report
+•  Presentation: to be decided by the team
 
-### Data sources
+AI tools (such as Claude Code) were used to help build and test the data collection pipeline, and any further AI assistance will be disclosed in the final report.
 
-- scrape from linkedin
+## **Data Sources**
 
-- scrape from indeed
+Since LinkedIn and Indeed restrict automated scraping, and scraping is brittle in general, Kailot has built a Python pipeline that collects job listings from official APIs and RSS feeds: Arbeitnow, RemoteOK, Himalayas, Jobicy, We Work Remotely, HN "Who's Hiring", Adzuna, and USAJobs. These sources provide structured, permitted access to current postings, giving us a snapshot of data science jobs in October 2026. The pipeline runs daily, so the dataset continues to grow.
 
-- alternative sources
+For historical comparison, we plan to use Luke Barousse's data_jobs dataset, which contains about 786,000 real data job postings collected from Google job search throughout 2023, with skills already extracted for each posting. We will compare skill demand between 2023 and our October 2026 snapshot.
 
-  - Discovery: will determine en route
+## **Data Storage**
 
-- Outside list: top 5 skills article
+The records are currently stored in SQLite and will be migrated to a shared PostgreSQL database, so the team can query them directly from R. Data from all sources will be integrated into a set of normalized tables (for example, separate tables for jobs, skills, and the skills listed in each job; the final schema will be confirmed by the team).
 
-  - Bucket the job requirements
+## **Workflow and Planned Analysis**
 
-### Anticipated Challenges
+•  **Import and initial checks:** We will import the collected job postings into R, remove duplicate postings, and handle missing values by either excluding incomplete records or labeling them as "unknown," depending on how important the field is.
 
-- Merging edits to a central R document
+•  **Skill identification:** We will define a list of data science skills starting from "Top 5 Skills for a Data Scientist: What's in Demand?" (Worcester Polytechnic Institute, 2022), aligned with the skill names in the historical dataset so both periods are measured the same way. We will search each job description for these terms, grouping different spellings under one skill (e.g., "sklearn" and "scikit-learn").
 
-- Unifying schema between
+•  **Tidying and outlier review:** We will reshape the results into tidy tables and review outliers, such as postings that list an unusually large number of skills or contain none of the skills on our list, before deciding whether to keep or exclude them.
 
-# Team Name Ideas
+•  **Exploration and visualization:** We plan to look at:
 
-- 
+      ◦  The most requested skills overall
 
-# Approach
+      ◦  **Benchmark comparison:** We will rank skills by the share of postings that mention them and compare our top five against the top five in the reference article, noting where they agree, differ, and which newer skills appear.
 
-1.  
-2.  
+      ◦  **Skill co-occurrence:** We will count how often pairs of skills appear in the same posting and visualize the results as a network graph, where skills are nodes and shared postings are connections. This will show which skills tend to be requested together and whether distinct clusters emerge (for example, analytics vs. machine learning vs. engineering).
+
+      ◦  Skill demand by industry, if industry information is available
+
+      ◦  Differences between our current snapshot and historical data, including whether AI and machine learning skills have grown, as the World Economic Forum's Future of Jobs Report 2025 projects
+
+## **Anticipated Challenges**
+
+•  Access limits: scraping restrictions on major job sites, plus API keys and rate limits for some sources (for example, Adzuna's free tier is very limited)
+
+•  Coverage: a limited sample at first, with several sources focused on remote or tech jobs
+
+•  Outdated skill list: our reference article is from 2022, so newer in-demand skills may be missing; we will add newer skills (for example, LLM-related tools) that appear in current postings
+
+•  Standardization: extracting skills from free-text job descriptions and unifying different schemas across sources
+
+•  Pre-extracted historical skills: the 2023 dataset tags a fixed list of mostly technical skills, so soft skills such as communication cannot be compared across periods
+
+•  Duplicates: the same job appearing on multiple sites or across daily runs
+
+•  Data reliability: we will check each source's provenance before use and note limitations
+
+•  Comparability: data from different periods and collection methods may not be directly comparable
+
+# **References**
+
+Worcester Polytechnic Institute. (2022, September 27). Top 5 skills for a data scientist: What's in demand? Catalyst. https://wp.wpi.edu/catalyst/2022/09/27/top-5-skills-for-a-data-scientist-whats-in-demand/
+
+Barousse, L. (2023). data_jobs \[Data set\]. Hugging Face. https://huggingface.co/datasets/lukebarousse/data_jobs
+
+World Economic Forum. (2025, January). The Future of Jobs Report 2025. https://reports.weforum.org/docs/WEF_Future_of_Jobs_Report_2025.pdf
