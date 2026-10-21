@@ -48,3 +48,7 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Project 3: 231 MB source CSV (from Hugging Face lukebarousse/data_jobs) --
+# kept local next to data_tasks; reload via scripts/load_barousse_jobs.py instead.
+data/data_jobs.csv

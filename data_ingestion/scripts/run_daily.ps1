@@ -36,6 +36,21 @@ if (-not $Python) {
 }
 
 Set-Location $RepoRoot
+
+# Storage guard: the shared Neon project caps at 512 MB, and the Barousse 2023
+# dataset leaves limited headroom. Skip the fetch if a pre-flight check shows
+# less than MIN_FREE_MB free (exit 1). Any other failure of the guard itself
+# is logged and does NOT block the run (fail open).
+$Guard = & $Python (Join-Path $PSScriptRoot "db_size_guard.py") 2>&1
+$GuardExit = $LASTEXITCODE
+"$(Get-Date -Format o) db-size-guard output: $Guard" | Out-File -FilePath $LogFile -Append -Encoding utf8
+if ($GuardExit -eq 1) {
+    "$(Get-Date -Format o) SKIPPED fetch: DB within 20 MB of the 512 MB cap." |
+        Out-File -FilePath $LogFile -Append -Encoding utf8
+    Write-Output "Fetch skipped: DB near storage cap (see guard's log above)."
+    exit 0
+}
+
 $Output = & $Python "src\pipeline.py" 2>&1
 $ExitCode = $LASTEXITCODE
 "=== $(Get-Date -Format o) === (python: $Python)" | Out-File -FilePath $LogFile -Append -Encoding utf8
