@@ -1,0 +1,696 @@
+{
+  "exhaustive": {
+    "nbHits": true,
+    "typo": true
+  },
+  "exhaustiveNbHits": true,
+  "exhaustiveTypo": true,
+  "hits": [
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "arbidh"
+        },
+        "comment_text": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "I am iOS developer with 13 years of experience with iOS working on mostly streaming and e-commerce apps. I also build my own productivity app that acts like a life coach removing old patterns and creating a new 90 day success plan. Here is the link. <a href=\"https://myportfilio-16732.web.app/\" rel=\"nofollow\">https://myportfilio-16732.web.app/</a>"
+        },
+        "story_title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Ask HN: Who is hiring? (October 2026)"
+        }
+      },
+      "_tags": [
+        "comment",
+        "author_arbidh",
+        "story_49922569"
+      ],
+      "author": "arbidh",
+      "comment_text": "I am iOS developer with 13 years of experience with iOS working on mostly streaming and e-commerce apps. I also build my own productivity app that acts like a life coach removing old patterns and creating a new 90 day success plan. Here is the link. <a href=\"https:&#x2F;&#x2F;myportfilio-16732.web.app&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;myportfilio-16732.web.app&#x2F;</a>",
+      "created_at": "2026-10-13T03:20:57Z",
+      "created_at_i": 1791861657,
+      "objectID": "50066205",
+      "parent_id": 49922569,
+      "story_id": 49922569,
+      "story_title": "Ask HN: Who is hiring? (October 2026)",
+      "updated_at": "2026-10-13T03:21:54Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "litenin"
+        },
+        "comment_text": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Remote in US only or can be global if willing to work the same timezone?"
+        },
+        "story_title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Ask HN: Who is hiring? (October 2026)"
+        }
+      },
+      "_tags": [
+        "comment",
+        "author_litenin",
+        "story_49922569"
+      ],
+      "author": "litenin",
+      "comment_text": "Remote in US only or can be global if willing to work the same timezone?",
+      "created_at": "2026-10-13T00:38:07Z",
+      "created_at_i": 1791851887,
+      "objectID": "50065057",
+      "parent_id": 50063001,
+      "story_id": 49922569,
+      "story_title": "Ask HN: Who is hiring? (October 2026)",
+      "updated_at": "2026-10-13T00:40:54Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "vrocheRHSC"
+        },
+        "comment_text": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Company: esumry.com\nLocation: West Austin TX ONSITE (mostly)<p>What we do\nesumry is an AI litigation platform built for defense. We help trial lawyers and claims professionals cut pretrial busywork across depositions, medical records, pleadings, and the rest of the case file so they can spend time on strategy instead of document wrangling.<p>About the role\nWe are looking for a Full-Stack Engineer to develop and maintain esumry with our startup development team, on an enterprise-grade AWS stack. This role is primarily in-office (coworking space) in the west Austin TX area.<p>more info: <a href=\"https://wellfound.com/jobs/4824572-software-engineer\" rel=\"nofollow\">https://wellfound.com/jobs/4824572-software-engineer</a>"
+        },
+        "story_title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Ask HN: Who is hiring? (October 2026)"
+        }
+      },
+      "_tags": [
+        "comment",
+        "author_vrocheRHSC",
+        "story_49922569"
+      ],
+      "author": "vrocheRHSC",
+      "comment_text": "Company: esumry.com\nLocation: West Austin TX ONSITE (mostly)<p>What we do\nesumry is an AI litigation platform built for defense. We help trial lawyers and claims professionals cut pretrial busywork across depositions, medical records, pleadings, and the rest of the case file so they can spend time on strategy instead of document wrangling.<p>About the role\nWe are looking for a Full-Stack Engineer to develop and maintain esumry with our startup development team, on an enterprise-grade AWS stack. This role is primarily in-office (coworking space) in the west Austin TX area.<p>more info: <a href=\"https:&#x2F;&#x2F;wellfound.com&#x2F;jobs&#x2F;4824572-software-engineer\" rel=\"nofollow\">https:&#x2F;&#x2F;wellfound.com&#x2F;jobs&#x2F;4824572-software-engineer</a>",
+      "created_at": "2026-10-12T21:23:04Z",
+      "created_at_i": 1791840184,
+      "objectID": "50063248",
+      "parent_id": 49922569,
+      "story_id": 49922569,
+      "story_title": "Ask HN: Who is hiring? (October 2026)",
+      "updated_at": "2026-10-12T21:26:39Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "lazyLambda_"
+        },
+        "comment_text": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Typify.dev (<a href=\"https://typify.dev\" rel=\"nofollow\">https://typify.dev</a>) | AI Application Engineer + Product Engineer | San Francisco (hybrid / remote available) | VISA | $80-120K USD (Negotiable) | galen@typify.dev<p>We're Typify, an education company for engineers that teaches functional programming and system design before pairing them with projects &amp; job prospects. We're hiring for two roles: Both mid-senior, Angular + NestJS + Postgres.<p>AI Application Engineer. Forward-deployed, ship LLM features close to real users, iterate on real usage, design guardrails and evals. RAG, agents, prompt and context engineering, tool orchestration. Bonus: conversational/voice AI, fine-tuning, healthcare AI, MCP.<p>Product Engineer. Own features end to end, scope, build, ship, measure, iterate. Strong product sense, UX obsession for a sensitive health product. Bonus: consumer or health product experience, early-stage startup time.<p>To apply: goto <a href=\"https://typify.dev/jobs/view/189\" rel=\"nofollow\">https://typify.dev/jobs/view/189</a> or <a href=\"https://typify.dev/jobs/view/188\" rel=\"nofollow\">https://typify.dev/jobs/view/188</a>. Just need your github and resume.<p>More on how we think: github.com/TypifyDev, r/haskell (u/_lazyLambda), @SimpleHaskell on YouTube."
+        },
+        "story_title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Ask HN: Who is hiring? (October 2026)"
+        }
+      },
+      "_tags": [
+        "comment",
+        "author_lazyLambda_",
+        "story_49922569"
+      ],
+      "author": "lazyLambda_",
+      "children": [
+        50065057
+      ],
+      "comment_text": "Typify.dev (<a href=\"https:&#x2F;&#x2F;typify.dev\" rel=\"nofollow\">https:&#x2F;&#x2F;typify.dev</a>) | AI Application Engineer + Product Engineer | San Francisco (hybrid &#x2F; remote available) | VISA | $80-120K USD (Negotiable) | galen@typify.dev<p>We&#x27;re Typify, an education company for engineers that teaches functional programming and system design before pairing them with projects &amp; job prospects. We&#x27;re hiring for two roles: Both mid-senior, Angular + NestJS + Postgres.<p>AI Application Engineer. Forward-deployed, ship LLM features close to real users, iterate on real usage, design guardrails and evals. RAG, agents, prompt and context engineering, tool orchestration. Bonus: conversational&#x2F;voice AI, fine-tuning, healthcare AI, MCP.<p>Product Engineer. Own features end to end, scope, build, ship, measure, iterate. Strong product sense, UX obsession for a sensitive health product. Bonus: consumer or health product experience, early-stage startup time.<p>To apply: goto <a href=\"https:&#x2F;&#x2F;typify.dev&#x2F;jobs&#x2F;view&#x2F;189\" rel=\"nofollow\">https:&#x2F;&#x2F;typify.dev&#x2F;jobs&#x2F;view&#x2F;189</a> or <a href=\"https:&#x2F;&#x2F;typify.dev&#x2F;jobs&#x2F;view&#x2F;188\" rel=\"nofollow\">https:&#x2F;&#x2F;typify.dev&#x2F;jobs&#x2F;view&#x2F;188</a>. Just need your github and resume.<p>More on how we think: github.com&#x2F;TypifyDev, r&#x2F;haskell (u&#x2F;_lazyLambda), @SimpleHaskell on YouTube.",
+      "created_at": "2026-10-12T21:00:23Z",
+      "created_at_i": 1791838823,
+      "objectID": "50063001",
+      "parent_id": 49922569,
+      "story_id": 49922569,
+      "story_title": "Ask HN: Who is hiring? (October 2026)",
+      "updated_at": "2026-10-13T00:39:10Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "matternous"
+        },
+        "comment_text": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Indiana Microelectronics LLC | RF Engineer | West Lafayette, IN | ONSITE | Full-time | Relocation assistance available<p>Indiana Micro is a small electronics company working on tunable RF filters and radio-frequency front-end (RFFE) systems for interference mitigation.<p>We\u2019re looking for an RF engineer to design, simulate, test, and optimize RF hardware\u2014from filters, amplifiers, and mixers through integrated front-end systems. You\u2019ll work with systems engineers, firmware developers, and customers from early\narchitecture through production.<p>Looking for:<p>- 3+ years of hands-on RF engineering, hardware design, or wireless communications experience.<p>- Strong RF/microwave fundamentals and experience with tools such as HFSS, Keysight ADS, Microwave Office, and Altium.<p>- Practical lab experience with network analyzers, spectrum analyzers, and related test equipment.<p>- Familiarity with Python or MATLAB for test automation and data analysis.<p>- Bachelor\u2019s or master\u2019s in EE, computer engineering, electrical engineering technology, or a related field.<p>Benefits include retirement benefits and PTO.<p>Email cuppys@indianamicro.com to apply."
+        },
+        "story_title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Ask HN: Who is hiring? (October 2026)"
+        }
+      },
+      "_tags": [
+        "comment",
+        "author_matternous",
+        "story_49922569"
+      ],
+      "author": "matternous",
+      "comment_text": "Indiana Microelectronics LLC | RF Engineer | West Lafayette, IN | ONSITE | Full-time | Relocation assistance available<p>Indiana Micro is a small electronics company working on tunable RF filters and radio-frequency front-end (RFFE) systems for interference mitigation.<p>We\u2019re looking for an RF engineer to design, simulate, test, and optimize RF hardware\u2014from filters, amplifiers, and mixers through integrated front-end systems. You\u2019ll work with systems engineers, firmware developers, and customers from early\narchitecture through production.<p>Looking for:<p>- 3+ years of hands-on RF engineering, hardware design, or wireless communications experience.<p>- Strong RF&#x2F;microwave fundamentals and experience with tools such as HFSS, Keysight ADS, Microwave Office, and Altium.<p>- Practical lab experience with network analyzers, spectrum analyzers, and related test equipment.<p>- Familiarity with Python or MATLAB for test automation and data analysis.<p>- Bachelor\u2019s or master\u2019s in EE, computer engineering, electrical engineering technology, or a related field.<p>Benefits include retirement benefits and PTO.<p>Email cuppys@indianamicro.com to apply.",
+      "created_at": "2026-10-12T20:59:57Z",
+      "created_at_i": 1791838797,
+      "objectID": "50062997",
+      "parent_id": 49922569,
+      "story_id": 49922569,
+      "story_title": "Ask HN: Who is hiring? (October 2026)",
+      "updated_at": "2026-10-12T21:01:12Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "DHIO"
+        },
+        "comment_text": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "HiO (hio.ai) | Growth Marketing Manager | Remote (US, Eastern hours) | Full-time | $140K\u2013$160K + equity<p>HiO is an AI business partner for small business owners. It works across their customer conversations on Instagram, WhatsApp, SMS and email, spots opportunities and flags what needs the owner\u2019s attention. We\u2019ve raised a $16M seed round and we\u2019re a small team that moves fast.<p>We need our first growth hire, and you\u2019d own the growth engine end to end. That means paid social and search with real budget accountability, SEO and visibility in AI/LLM answers, landing page and signup conversion, referral, and testing new channels and killing the ones that don\u2019t work. You\u2019d also build the measurement layer from scratch: funnel instrumentation, CAC/LTV and activation metrics.<p>There\u2019s no dedicated growth engineer, so you\u2019ll build your own automation: AI-assisted creative testing, automated reporting and agentic campaign workflows.<p>What we\u2019re looking for: 5+ years in growth at a SaaS company (SMB or PLG at seed or Series A is ideal). You\u2019ve owned the full funnel yourself rather than executing someone else\u2019s strategy, and you can show specific workflows you\u2019ve automated with AI. This is a hands-on role with no team to manage near-term.<p>Apply: <a href=\"https://www.linkedin.com/jobs/view/4468585742/\" rel=\"nofollow\">https://www.linkedin.com/jobs/view/4468585742/</a>"
+        },
+        "story_title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Ask HN: Who is hiring? (October 2026)"
+        }
+      },
+      "_tags": [
+        "comment",
+        "author_DHIO",
+        "story_49922569"
+      ],
+      "author": "DHIO",
+      "comment_text": "HiO (hio.ai) | Growth Marketing Manager | Remote (US, Eastern hours) | Full-time | $140K\u2013$160K + equity<p>HiO is an AI business partner for small business owners. It works across their customer conversations on Instagram, WhatsApp, SMS and email, spots opportunities and flags what needs the owner\u2019s attention. We\u2019ve raised a $16M seed round and we\u2019re a small team that moves fast.<p>We need our first growth hire, and you\u2019d own the growth engine end to end. That means paid social and search with real budget accountability, SEO and visibility in AI&#x2F;LLM answers, landing page and signup conversion, referral, and testing new channels and killing the ones that don\u2019t work. You\u2019d also build the measurement layer from scratch: funnel instrumentation, CAC&#x2F;LTV and activation metrics.<p>There\u2019s no dedicated growth engineer, so you\u2019ll build your own automation: AI-assisted creative testing, automated reporting and agentic campaign workflows.<p>What we\u2019re looking for: 5+ years in growth at a SaaS company (SMB or PLG at seed or Series A is ideal). You\u2019ve owned the full funnel yourself rather than executing someone else\u2019s strategy, and you can show specific workflows you\u2019ve automated with AI. This is a hands-on role with no team to manage near-term.<p>Apply: <a href=\"https:&#x2F;&#x2F;www.linkedin.com&#x2F;jobs&#x2F;view&#x2F;4468585742&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.linkedin.com&#x2F;jobs&#x2F;view&#x2F;4468585742&#x2F;</a>",
+      "created_at": "2026-10-12T18:51:56Z",
+      "created_at_i": 1791831116,
+      "objectID": "50061040",
+      "parent_id": 49922569,
+      "story_id": 49922569,
+      "story_title": "Ask HN: Who is hiring? (October 2026)",
+      "updated_at": "2026-10-12T18:54:22Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "StartupHakkJobs"
+        },
+        "comment_text": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "StartupHakk | AI Engineer Apprentice | Remote (UT or ID residents only) | Full-time | $7.25\u2013$10/hr | startuphakk.com/jobs<p>We are hiring military veterans (and transitioning service members) living in Utah or Idaho for a paid, 1-year registered remote apprenticeship program in full-stack web development and applied AI.<p>What You'll Do &amp; Learn:<p>Full-stack development: C# .NET, React.js, SQL, HTML/CSS, cloud platforms, and DevOps.<p>Applied AI Engineering: Prompt engineering, LLM integration, running open-source models locally, and building AI features into web applications.<p>2,000 hours on-the-job learning + 144 hours structured instruction.<p>Requirements:<p>U.S. Military Veteran or transitioning service member residing in UT or ID.<p>18+ years old, HS diploma/GED, eligible to work in the U.S.<p>Strong passion for tech and continuous learning.<p>Progressive wage: $7.25/hr (first 1,000 hrs) -&gt; $10.00/hr (second 1,000 hrs).<p>Apply:\nLearn more and apply at <a href=\"https://startuphakk.com/jobs\" rel=\"nofollow\">https://startuphakk.com/jobs</a>"
+        },
+        "story_title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Ask HN: Who is hiring? (October 2026)"
+        }
+      },
+      "_tags": [
+        "comment",
+        "author_StartupHakkJobs",
+        "story_49922569"
+      ],
+      "author": "StartupHakkJobs",
+      "comment_text": "StartupHakk | AI Engineer Apprentice | Remote (UT or ID residents only) | Full-time | $7.25\u2013$10&#x2F;hr | startuphakk.com&#x2F;jobs<p>We are hiring military veterans (and transitioning service members) living in Utah or Idaho for a paid, 1-year registered remote apprenticeship program in full-stack web development and applied AI.<p>What You&#x27;ll Do &amp; Learn:<p>Full-stack development: C# .NET, React.js, SQL, HTML&#x2F;CSS, cloud platforms, and DevOps.<p>Applied AI Engineering: Prompt engineering, LLM integration, running open-source models locally, and building AI features into web applications.<p>2,000 hours on-the-job learning + 144 hours structured instruction.<p>Requirements:<p>U.S. Military Veteran or transitioning service member residing in UT or ID.<p>18+ years old, HS diploma&#x2F;GED, eligible to work in the U.S.<p>Strong passion for tech and continuous learning.<p>Progressive wage: $7.25&#x2F;hr (first 1,000 hrs) -&gt; $10.00&#x2F;hr (second 1,000 hrs).<p>Apply:\nLearn more and apply at <a href=\"https:&#x2F;&#x2F;startuphakk.com&#x2F;jobs\" rel=\"nofollow\">https:&#x2F;&#x2F;startuphakk.com&#x2F;jobs</a>",
+      "created_at": "2026-10-12T17:17:48Z",
+      "created_at_i": 1791825468,
+      "objectID": "50059584",
+      "parent_id": 49922569,
+      "story_id": 49922569,
+      "story_title": "Ask HN: Who is hiring? (October 2026)",
+      "updated_at": "2026-10-12T17:19:53Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "fiiico"
+        },
+        "comment_text": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Matcha.fm | REMOTE (Worldwide: US / Canada / Europe / UK / LATAM) | Full-time | <a href=\"https://matcha.fm\" rel=\"nofollow\">https://matcha.fm</a><p>I'm a Canadian repeat founder working on agents that cut the noise in large dataset search.<p>Looking for a great builder (founding software engineer) and a great marketer both with a track record of virality and driving product distribution.<p>Fully remote anywhere in the world, with some US / EU timezone overlap.<p>The same salary regardless of where you live<p>No micromanagement, no unnecessary calls<p>Calm, low-distraction culture to do your best work<p>Founding Software Engineer : <a href=\"https://matcha.fm/apply/fse\" rel=\"nofollow\">https://matcha.fm/apply/fse</a><p>Founding Marketer : <a href=\"https://matcha.fm/apply/marketing\" rel=\"nofollow\">https://matcha.fm/apply/marketing</a>"
+        },
+        "story_title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Ask HN: Who is hiring? (October 2026)"
+        }
+      },
+      "_tags": [
+        "comment",
+        "author_fiiico",
+        "story_49922569"
+      ],
+      "author": "fiiico",
+      "comment_text": "Matcha.fm | REMOTE (Worldwide: US &#x2F; Canada &#x2F; Europe &#x2F; UK &#x2F; LATAM) | Full-time | <a href=\"https:&#x2F;&#x2F;matcha.fm\" rel=\"nofollow\">https:&#x2F;&#x2F;matcha.fm</a><p>I&#x27;m a Canadian repeat founder working on agents that cut the noise in large dataset search.<p>Looking for a great builder (founding software engineer) and a great marketer both with a track record of virality and driving product distribution.<p>Fully remote anywhere in the world, with some US &#x2F; EU timezone overlap.<p>The same salary regardless of where you live<p>No micromanagement, no unnecessary calls<p>Calm, low-distraction culture to do your best work<p>Founding Software Engineer : <a href=\"https:&#x2F;&#x2F;matcha.fm&#x2F;apply&#x2F;fse\" rel=\"nofollow\">https:&#x2F;&#x2F;matcha.fm&#x2F;apply&#x2F;fse</a><p>Founding Marketer : <a href=\"https:&#x2F;&#x2F;matcha.fm&#x2F;apply&#x2F;marketing\" rel=\"nofollow\">https:&#x2F;&#x2F;matcha.fm&#x2F;apply&#x2F;marketing</a>",
+      "created_at": "2026-10-12T14:05:33Z",
+      "created_at_i": 1791813933,
+      "objectID": "50056667",
+      "parent_id": 49922569,
+      "story_id": 49922569,
+      "story_title": "Ask HN: Who is hiring? (October 2026)",
+      "updated_at": "2026-10-12T16:23:52Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "chrisworsey55"
+        },
+        "comment_text": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "General Intelligence Holdings | <a href=\"https://www.generalintelligenceholdings.com\" rel=\"nofollow\">https://www.generalintelligenceholdings.com</a> | Founding CTO | REMOTE (UK working-hour overlap preferred) | Fundraising | Salary/equity to be agreed<p>I'm Chris, founder of GIH. We're building an AI operating platform for established service businesses, starting with UK accountancy. Our model is to acquire businesses and deploy the software into their daily workflows, measuring its effect on time, quality and cost.<p>We've built version 1 of Helix, connecting accounting workflows, AI assistance, source evidence and review controls. It covers work including reconciliation, payroll, VAT and debtors. The next challenge is deployment in an operating practice, including production integrations, security and independent validation.<p>I'm looking for a hands-on CTO to own architecture and engineering delivery, write code, work with accountants and build the technical team. You should have shipped and operated customer-facing software, be comfortable with APIs and data systems, and have practical experience evaluating LLM/agent workflows. Previous CTO experience isn't essential; evidence of building and owning a product is.<p>We're currently fundraising and expect the round to close at the end of November 2026. You can join when the round closes or start earlier, depending on your availability and preference. Salary, equity and any arrangements before the round closes will be agreed directly. This is intended as a full-time technical leadership role.<p>Email chris@generalintelligencecapital.com with \u201cHN CTO\u201d in the subject, your CV/LinkedIn, something you built, your location and preferred start date."
+        },
+        "story_title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Ask HN: Who is hiring? (October 2026)"
+        }
+      },
+      "_tags": [
+        "comment",
+        "author_chrisworsey55",
+        "story_49922569"
+      ],
+      "author": "chrisworsey55",
+      "comment_text": "General Intelligence Holdings | <a href=\"https:&#x2F;&#x2F;www.generalintelligenceholdings.com\" rel=\"nofollow\">https:&#x2F;&#x2F;www.generalintelligenceholdings.com</a> | Founding CTO | REMOTE (UK working-hour overlap preferred) | Fundraising | Salary&#x2F;equity to be agreed<p>I&#x27;m Chris, founder of GIH. We&#x27;re building an AI operating platform for established service businesses, starting with UK accountancy. Our model is to acquire businesses and deploy the software into their daily workflows, measuring its effect on time, quality and cost.<p>We&#x27;ve built version 1 of Helix, connecting accounting workflows, AI assistance, source evidence and review controls. It covers work including reconciliation, payroll, VAT and debtors. The next challenge is deployment in an operating practice, including production integrations, security and independent validation.<p>I&#x27;m looking for a hands-on CTO to own architecture and engineering delivery, write code, work with accountants and build the technical team. You should have shipped and operated customer-facing software, be comfortable with APIs and data systems, and have practical experience evaluating LLM&#x2F;agent workflows. Previous CTO experience isn&#x27;t essential; evidence of building and owning a product is.<p>We&#x27;re currently fundraising and expect the round to close at the end of November 2026. You can join when the round closes or start earlier, depending on your availability and preference. Salary, equity and any arrangements before the round closes will be agreed directly. This is intended as a full-time technical leadership role.<p>Email chris@generalintelligencecapital.com with \u201cHN CTO\u201d in the subject, your CV&#x2F;LinkedIn, something you built, your location and preferred start date.",
+      "created_at": "2026-10-12T11:51:09Z",
+      "created_at_i": 1791805869,
+      "objectID": "50055019",
+      "parent_id": 49922569,
+      "story_id": 49922569,
+      "story_title": "Ask HN: Who is hiring? (October 2026)",
+      "updated_at": "2026-10-12T11:54:22Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "designgirl001"
+        },
+        "comment_text": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Will you hire designers to build the UX and usability of this complex product? Super interested and would like to get in touch (and put in a speculative application as well)"
+        },
+        "story_title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Ask HN: Who is hiring? (October 2026)"
+        }
+      },
+      "_tags": [
+        "comment",
+        "author_designgirl001",
+        "story_49922569"
+      ],
+      "author": "designgirl001",
+      "comment_text": "Will you hire designers to build the UX and usability of this complex product? Super interested and would like to get in touch (and put in a speculative application as well)",
+      "created_at": "2026-10-11T17:44:31Z",
+      "created_at_i": 1791740671,
+      "objectID": "50045782",
+      "parent_id": 50002587,
+      "story_id": 49922569,
+      "story_title": "Ask HN: Who is hiring? (October 2026)",
+      "updated_at": "2026-10-11T18:13:49Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "designgirl001"
+        },
+        "comment_text": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "How is the product development culture at Wipro India? Only heard of them as a outsourcing company, that hired people for very low salaries and subjected them to a lot of corporate politics (in India). Have they improved?"
+        },
+        "story_title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Ask HN: Who is hiring? (October 2026)"
+        }
+      },
+      "_tags": [
+        "comment",
+        "author_designgirl001",
+        "story_49922569"
+      ],
+      "author": "designgirl001",
+      "comment_text": "How is the product development culture at Wipro India? Only heard of them as a outsourcing company, that hired people for very low salaries and subjected them to a lot of corporate politics (in India). Have they improved?",
+      "created_at": "2026-10-11T17:41:16Z",
+      "created_at_i": 1791740476,
+      "objectID": "50045737",
+      "parent_id": 49935587,
+      "story_id": 49922569,
+      "story_title": "Ask HN: Who is hiring? (October 2026)",
+      "updated_at": "2026-10-11T17:44:05Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "designgirl001"
+        },
+        "comment_text": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "I applied to a design role at this company and they didn\u2019t bother to reply. And then I saw the job posted again. I think they aren\u2019t serious about hiring and are misleading people."
+        },
+        "story_title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Ask HN: Who is hiring? (October 2026)"
+        }
+      },
+      "_tags": [
+        "comment",
+        "author_designgirl001",
+        "story_49922569"
+      ],
+      "author": "designgirl001",
+      "comment_text": "I applied to a design role at this company and they didn\u2019t bother to reply. And then I saw the job posted again. I think they aren\u2019t serious about hiring and are misleading people.",
+      "created_at": "2026-10-11T17:39:04Z",
+      "created_at_i": 1791740344,
+      "objectID": "50045714",
+      "parent_id": 50016917,
+      "story_id": 49922569,
+      "story_title": "Ask HN: Who is hiring? (October 2026)",
+      "updated_at": "2026-10-11T22:30:19Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "designgirl001"
+        },
+        "comment_text": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "I applied to a design role at this company and they didn\u2019t bother to reply. And then I saw the job posted again. I think they aren\u2019t serious about hiring and are misleading people.<p>If I am wrong, then Enveritas team - please do the due diligence of seeing who comes via this platform that you post to."
+        },
+        "story_title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Ask HN: Who is hiring? (October 2026)"
+        }
+      },
+      "_tags": [
+        "comment",
+        "author_designgirl001",
+        "story_49922569"
+      ],
+      "author": "designgirl001",
+      "comment_text": "I applied to a design role at this company and they didn\u2019t bother to reply. And then I saw the job posted again. I think they aren\u2019t serious about hiring and are misleading people.<p>If I am wrong, then Enveritas team - please do the due diligence of seeing who comes via this platform that you post to.",
+      "created_at": "2026-10-11T17:38:20Z",
+      "created_at_i": 1791740300,
+      "objectID": "50045707",
+      "parent_id": 49925489,
+      "story_id": 49922569,
+      "story_title": "Ask HN: Who is hiring? (October 2026)",
+      "updated_at": "2026-10-11T22:30:19Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "designgirl001"
+        },
+        "comment_text": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Why is this a product manager role and not a design role? Designers can do better design than a PM. This doesn\u2019t even read like what a PM does, the whole thing seems like a design workflow."
+        },
+        "story_title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Ask HN: Who is hiring? (October 2026)"
+        }
+      },
+      "_tags": [
+        "comment",
+        "author_designgirl001",
+        "story_49922569"
+      ],
+      "author": "designgirl001",
+      "comment_text": "Why is this a product manager role and not a design role? Designers can do better design than a PM. This doesn\u2019t even read like what a PM does, the whole thing seems like a design workflow.",
+      "created_at": "2026-10-11T17:36:09Z",
+      "created_at_i": 1791740169,
+      "objectID": "50045679",
+      "parent_id": 50021373,
+      "story_id": 49922569,
+      "story_title": "Ask HN: Who is hiring? (October 2026)",
+      "updated_at": "2026-10-11T17:38:49Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "mohsennurisa"
+        },
+        "comment_text": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "We had the same argument with someone over the use of terms such as &quot;fascism&quot; out of context and used interchangeably to imply only one or two traits out of all set of characteristics defining the term. I agree that it does change the perceived meaning of the word when overused loosely like this."
+        },
+        "story_title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Ask HN: Who is hiring? (October 2026)"
+        }
+      },
+      "_tags": [
+        "comment",
+        "author_mohsennurisa",
+        "story_49922569"
+      ],
+      "author": "mohsennurisa",
+      "comment_text": "We had the same argument with someone over the use of terms such as &quot;fascism&quot; out of context and used interchangeably to imply only one or two traits out of all set of characteristics defining the term. I agree that it does change the perceived meaning of the word when overused loosely like this.",
+      "created_at": "2026-10-11T11:04:35Z",
+      "created_at_i": 1791716675,
+      "objectID": "50041882",
+      "parent_id": 49936464,
+      "story_id": 49922569,
+      "story_title": "Ask HN: Who is hiring? (October 2026)",
+      "updated_at": "2026-10-11T11:05:18Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "nbraga"
+        },
+        "comment_text": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Chronograph (chronograph.pe) | Platform Engineer | Full-Time | Remote (US) | $175,000 - $215,000 USD + equity<p>Chronograph was founded to bring next-generation technology to private capital markets. Through our suite of cloud-based analytics and data management solutions, we help many of the world's largest and most sophisticated venture capital, private equity, and credit funds understand their investment performance in unprecedented detail. As our business grows, we're expanding the team, backed by a recent $140M+ growth equity raise.<p>We are looking for a candidate with a generalist background in software development, including 5+ years of experience on Platform Engineering, DevSecOps, Site Reliability Engineering (SRE), or MLOps teams. You'd be joining a small cross-functional team and have the chance to make critical contributions. Our ideal candidate has a passion for automating ops, troubleshooting infrastructure, and creating first-class developer experiences. On top of that, expertise with the following (or similar) tools/technologies is a strong signal of fit: Kubernetes, Prometheus, Grafana, Terraform, AWS, GitHub Actions, PostgreSQL, Node.js, Ruby on Rails, Nix, and Docker.<p>If interested, apply here: <a href=\"https://grnh.se/1pm4u2ys7us\" rel=\"nofollow\">https://grnh.se/1pm4u2ys7us</a>"
+        },
+        "story_title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Ask HN: Who is hiring? (October 2026)"
+        }
+      },
+      "_tags": [
+        "comment",
+        "author_nbraga",
+        "story_49922569"
+      ],
+      "author": "nbraga",
+      "comment_text": "Chronograph (chronograph.pe) | Platform Engineer | Full-Time | Remote (US) | $175,000 - $215,000 USD + equity<p>Chronograph was founded to bring next-generation technology to private capital markets. Through our suite of cloud-based analytics and data management solutions, we help many of the world&#x27;s largest and most sophisticated venture capital, private equity, and credit funds understand their investment performance in unprecedented detail. As our business grows, we&#x27;re expanding the team, backed by a recent $140M+ growth equity raise.<p>We are looking for a candidate with a generalist background in software development, including 5+ years of experience on Platform Engineering, DevSecOps, Site Reliability Engineering (SRE), or MLOps teams. You&#x27;d be joining a small cross-functional team and have the chance to make critical contributions. Our ideal candidate has a passion for automating ops, troubleshooting infrastructure, and creating first-class developer experiences. On top of that, expertise with the following (or similar) tools&#x2F;technologies is a strong signal of fit: Kubernetes, Prometheus, Grafana, Terraform, AWS, GitHub Actions, PostgreSQL, Node.js, Ruby on Rails, Nix, and Docker.<p>If interested, apply here: <a href=\"https:&#x2F;&#x2F;grnh.se&#x2F;1pm4u2ys7us\" rel=\"nofollow\">https:&#x2F;&#x2F;grnh.se&#x2F;1pm4u2ys7us</a>",
+      "created_at": "2026-10-10T13:55:55Z",
+      "created_at_i": 1791640555,
+      "objectID": "50033036",
+      "parent_id": 49922569,
+      "story_id": 49922569,
+      "story_title": "Ask HN: Who is hiring? (October 2026)",
+      "updated_at": "2026-10-10T20:53:32Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "rehanurrahman"
+        },
+        "comment_text": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Interested in the new grad / early career role. Built and run peatlearn.com end to end (FastAPI, React, Docker, CI/CD). Python-first, ramping on Java/Spring. github.com/spacesheepinternet. What's the best email to send a r\u00e9sum\u00e9 to?"
+        },
+        "story_title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Ask HN: Who is hiring? (October 2026)"
+        }
+      },
+      "_tags": [
+        "comment",
+        "author_rehanurrahman",
+        "story_49922569"
+      ],
+      "author": "rehanurrahman",
+      "comment_text": "Interested in the new grad &#x2F; early career role. Built and run peatlearn.com end to end (FastAPI, React, Docker, CI&#x2F;CD). Python-first, ramping on Java&#x2F;Spring. github.com&#x2F;spacesheepinternet. What&#x27;s the best email to send a r\u00e9sum\u00e9 to?",
+      "created_at": "2026-10-10T10:58:23Z",
+      "created_at_i": 1791629903,
+      "objectID": "50031656",
+      "parent_id": 49982648,
+      "story_id": 49922569,
+      "story_title": "Ask HN: Who is hiring? (October 2026)",
+      "updated_at": "2026-10-10T11:02:01Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "lassiecoder"
+        },
+        "comment_text": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Location: Bangalore, India (IST, UTC+5:30)<p>Remote: Yes<p>Willing to relocate: No<p>Technologies: React Native, React, Next.js, TypeScript, JavaScript, Astro, Expo, Redux Toolkit, Zustand, React Query, Node.js, Express, MongoDB, Firebase, Jest, React Testing Library, GitHub Actions, Fastlane, AWS, Gemini API, Azure OpenAI, Claude Code, Cursor<p>R\u00e9sum\u00e9/CV: <a href=\"https://drive.google.com/file/d/1banj1xCIv-wA9n7xUG4vkelBbFuffQJL/view\" rel=\"nofollow\">https://drive.google.com/file/d/1banj1xCIv-wA9n7xUG4vkelBbFu...</a>\nPortfolio: <a href=\"https://lassiecoder.com/\" rel=\"nofollow\">https://lassiecoder.com/</a>\nGitHub: <a href=\"https://github.com/lassiecoder\" rel=\"nofollow\">https://github.com/lassiecoder</a>\nLinkedIn: <a href=\"https://www.linkedin.com/in/lassiecoder\" rel=\"nofollow\">https://www.linkedin.com/in/lassiecoder</a>\nEmail: hirepriyankasharma@gmail.com<p>Mobile + web engineer with 6 years shipping consumer and fintech products end to end. Currently SDE2 at Zataverse (formerly Black Leaf Digital, LA-based, working async from India).<p>Some things I've shipped:\n- Imaige (<a href=\"https://imaige.io\" rel=\"nofollow\">https://imaige.io</a>): built the site from scratch, including auth, payment gateway integration and onboarding, improving checkout reliability\n- Socialaize and Staryo: OAuth/social sign-in, push notifications, production stability fixes\n- Adecco app (700K+ daily users): white-label onboarding and eKYC; automated releases with Fastlane + GitOps (60% faster) and PR checks with GitHub Actions (40% less review overhead)\n- Torum Pay: push notifications with deep linking, reworked state management and cut app crashes 30%\n- EduFund: KYC for Indian and US investment accounts, push notifications that lifted new-user activity 47%<p>Also: author of &quot;AI + Gemini for Web Developers&quot; (<a href=\"https://fable.co/book/x-9798231622320\" rel=\"nofollow\">https://fable.co/book/x-9798231622320</a>), and spoke at Microsoft Bangalore on taking Azure OpenAI integrations to production.<p>Looking for: a remote React Native / frontend / product engineer role on a product-focused team, ideally where AI features are part of the product. Happy to own features end to end."
+        },
+        "story_title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Ask HN: Who is hiring? (October 2026)"
+        }
+      },
+      "_tags": [
+        "comment",
+        "author_lassiecoder",
+        "story_49922569"
+      ],
+      "author": "lassiecoder",
+      "children": [
+        50037023
+      ],
+      "comment_text": "Location: Bangalore, India (IST, UTC+5:30)<p>Remote: Yes<p>Willing to relocate: No<p>Technologies: React Native, React, Next.js, TypeScript, JavaScript, Astro, Expo, Redux Toolkit, Zustand, React Query, Node.js, Express, MongoDB, Firebase, Jest, React Testing Library, GitHub Actions, Fastlane, AWS, Gemini API, Azure OpenAI, Claude Code, Cursor<p>R\u00e9sum\u00e9&#x2F;CV: <a href=\"https:&#x2F;&#x2F;drive.google.com&#x2F;file&#x2F;d&#x2F;1banj1xCIv-wA9n7xUG4vkelBbFuffQJL&#x2F;view\" rel=\"nofollow\">https:&#x2F;&#x2F;drive.google.com&#x2F;file&#x2F;d&#x2F;1banj1xCIv-wA9n7xUG4vkelBbFu...</a>\nPortfolio: <a href=\"https:&#x2F;&#x2F;lassiecoder.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;lassiecoder.com&#x2F;</a>\nGitHub: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;lassiecoder\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;lassiecoder</a>\nLinkedIn: <a href=\"https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;lassiecoder\" rel=\"nofollow\">https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;lassiecoder</a>\nEmail: hirepriyankasharma@gmail.com<p>Mobile + web engineer with 6 years shipping consumer and fintech products end to end. Currently SDE2 at Zataverse (formerly Black Leaf Digital, LA-based, working async from India).<p>Some things I&#x27;ve shipped:\n- Imaige (<a href=\"https:&#x2F;&#x2F;imaige.io\" rel=\"nofollow\">https:&#x2F;&#x2F;imaige.io</a>): built the site from scratch, including auth, payment gateway integration and onboarding, improving checkout reliability\n- Socialaize and Staryo: OAuth&#x2F;social sign-in, push notifications, production stability fixes\n- Adecco app (700K+ daily users): white-label onboarding and eKYC; automated releases with Fastlane + GitOps (60% faster) and PR checks with GitHub Actions (40% less review overhead)\n- Torum Pay: push notifications with deep linking, reworked state management and cut app crashes 30%\n- EduFund: KYC for Indian and US investment accounts, push notifications that lifted new-user activity 47%<p>Also: author of &quot;AI + Gemini for Web Developers&quot; (<a href=\"https:&#x2F;&#x2F;fable.co&#x2F;book&#x2F;x-9798231622320\" rel=\"nofollow\">https:&#x2F;&#x2F;fable.co&#x2F;book&#x2F;x-9798231622320</a>), and spoke at Microsoft Bangalore on taking Azure OpenAI integrations to production.<p>Looking for: a remote React Native &#x2F; frontend &#x2F; product engineer role on a product-focused team, ideally where AI features are part of the product. Happy to own features end to end.",
+      "created_at": "2026-10-09T19:05:22Z",
+      "created_at_i": 1791572722,
+      "objectID": "50025234",
+      "parent_id": 49922569,
+      "story_id": 49922569,
+      "story_title": "Ask HN: Who is hiring? (October 2026)",
+      "updated_at": "2026-10-10T20:49:16Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Ailuropoda"
+        },
+        "comment_text": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "how do we apply?"
+        },
+        "story_title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Ask HN: Who is hiring? (October 2026)"
+        }
+      },
+      "_tags": [
+        "comment",
+        "author_Ailuropoda",
+        "story_49922569"
+      ],
+      "author": "Ailuropoda",
+      "comment_text": "how do we apply?",
+      "created_at": "2026-10-09T18:54:35Z",
+      "created_at_i": 1791572075,
+      "objectID": "50025113",
+      "parent_id": 49928452,
+      "story_id": 49922569,
+      "story_title": "Ask HN: Who is hiring? (October 2026)",
+      "updated_at": "2026-10-09T18:56:28Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Aarhus_Behzad"
+        },
+        "comment_text": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "I lead the A3 Lab at Aarhus University and are hiring a Three-year PhD in Physical AI; onsite in Aarhus, Denmark.<p>Topics: Vision\u2013language\u2013action models, world models, reliable adaptation and efficient AI, RL.\nBackground: Relevant master\u2019s degree and strong Python/PyTorch experience.\nDeadline: 1 November 2026.\nStart: January 2027 or later.\nContact: behzad@ece.au.dk.\nOfficial application link: <a href=\"https://phd.tech.au.dk/for-applicants/apply-here/saeropslag/phd-position-in-physical-ai-adaptive-foundation-models-for-robotics?utm_source=chatgpt.com\" rel=\"nofollow\">https://phd.tech.au.dk/for-applicants/apply-here/saeropslag/...</a>"
+        },
+        "story_title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Ask HN: Who is hiring? (October 2026)"
+        }
+      },
+      "_tags": [
+        "comment",
+        "author_Aarhus_Behzad",
+        "story_49922569"
+      ],
+      "author": "Aarhus_Behzad",
+      "comment_text": "I lead the A3 Lab at Aarhus University and are hiring a Three-year PhD in Physical AI; onsite in Aarhus, Denmark.<p>Topics: Vision\u2013language\u2013action models, world models, reliable adaptation and efficient AI, RL.\nBackground: Relevant master\u2019s degree and strong Python&#x2F;PyTorch experience.\nDeadline: 1 November 2026.\nStart: January 2027 or later.\nContact: behzad@ece.au.dk.\nOfficial application link: <a href=\"https:&#x2F;&#x2F;phd.tech.au.dk&#x2F;for-applicants&#x2F;apply-here&#x2F;saeropslag&#x2F;phd-position-in-physical-ai-adaptive-foundation-models-for-robotics?utm_source=chatgpt.com\" rel=\"nofollow\">https:&#x2F;&#x2F;phd.tech.au.dk&#x2F;for-applicants&#x2F;apply-here&#x2F;saeropslag&#x2F;...</a>",
+      "created_at": "2026-10-09T15:25:40Z",
+      "created_at_i": 1791559540,
+      "objectID": "50021883",
+      "parent_id": 49922569,
+      "story_id": 49922569,
+      "story_title": "Ask HN: Who is hiring? (October 2026)",
+      "updated_at": "2026-10-09T15:27:02Z"
+    }
+  ],
+  "hitsPerPage": 20,
+  "nbHits": 383,
+  "nbPages": 20,
+  "page": 0,
+  "params": "tags=comment%2Cstory_49922569&hitsPerPage=20&advancedSyntax=true&analyticsTags=backend",
+  "processingTimeMS": 1,
+  "processingTimingsMS": {
+    "_request": {
+      "roundTrip": 14
+    },
+    "afterFetch": {
+      "format": {
+        "highlighting": 1,
+        "total": 1
+      }
+    },
+    "total": 1
+  },
+  "query": "",
+  "serverTimeMS": 2
+}

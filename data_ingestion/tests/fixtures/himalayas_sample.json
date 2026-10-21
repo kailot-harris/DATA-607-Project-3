@@ -1,0 +1,221 @@
+{
+  "comments": "21/08/2026: Cursor pagination is now available and is the preferred way to page through the feed. Pass the nextCursor value from each response back as ?cursor=. It is faster than offset and will never return the same job twice. The offset parameter is deprecated and will be removed in a future release. 13/03/2026: The API has been updated to include the companySlug field in the response.",
+  "updatedAt": 1791860396,
+  "offset": 0,
+  "limit": 5,
+  "totalCount": 124562,
+  "nextCursor": "MjAyNi0xMC0xM1QwMjo1NjoxNi45NDEyNTZafDIzOTY4NDg",
+  "jobs": [
+    {
+      "title": "Customer Service Representative (Dutch) - Remote, Greece",
+      "excerpt": "About the RoleWe are seeking a friendly and communicative Customer Service Representative fluent in Dutch to join a dynamic, international support team in Greece.",
+      "companyName": "Nordic Recruiters",
+      "companySlug": "nordic-recruiters",
+      "companyLogo": "https://cdn-images.himalayas.app/wigja2l8pv0tvcesatw2tujnu3qz",
+      "employmentType": "Full Time",
+      "minSalary": null,
+      "maxSalary": null,
+      "salaryPeriod": "annual",
+      "seniority": [
+        "Entry-level"
+      ],
+      "currency": null,
+      "locationRestrictions": [
+        "Greece"
+      ],
+      "timezoneRestrictions": [
+        2
+      ],
+      "categories": [
+        "Customer-Service",
+        "Call-Center-Representative",
+        "Customer-Support-Specialist",
+        "Dutch-Customer-Service",
+        "Dutch-Speaking-Customer-Support-Representative",
+        "Dutch-Speaking-Customer-Service-Representative",
+        "Remote-Dutch-Customer-Support",
+        "Dutch-Customer-Service-Advisor"
+      ],
+      "parentCategories": [
+        "Customer Service"
+      ],
+      "description": "<h3>About the Role</h3><p>We are seeking a friendly and communicative Customer Service Representative fluent in Dutch to join a dynamic, international support team in Greece. In this fulltime position, you will be the main point of contact for customers: youll handle inquiries, resolve issues, and clarify bookings, payments or other service questions  always delivering professional, reliable support via phone and email. Youll join a multicultural team, working with empathy and efficiency to ensure customer satisfaction across diverse markets.</p><h3>What You Bring</h3><ul>\n<li>Native or fluent Dutch (spoken and written), plus a good command of English</li>\n<li>Excellent verbal and written communication and interpersonal skills</li>\n<li>Familiarity with tools such as Office365, CRM platforms or similar internal systems</li>\n<li>Problem solving attitude, flexibility, and the ability to adapt to changing priorities</li>\n<li>Previous experience in customer support or contact centre environments is an advantage</li>\n<li>Interest in travel or accommodation related services is a plus</li>\n</ul><h3>Whats On Offer</h3><ul>\n<li>A welcoming, multicultural work environment with full training and ongoing coaching  designed to help you succeed from day one</li>\n<li>Opportunities for professional growth and career development within the company</li>\n<li>Flexibility: potential for remote work depending on location and circumstances</li>\n<li>If contract becomes permanent, access to benefits such as private health insurance may be available</li>\n</ul><h3>Why Greece?</h3><p>Greece offers a lifestyle many find appealing  Mediterranean climate, friendly community, and a relaxed atmosphere that blends work and leisure. The cost of living is generally lower than in many Western European countries: everyday expenses such as housing, food, and transport are more affordable, making it easier to enjoy life without overspending.</p><p>Life in Greece also brings a rich cultural and social experience. Whether you're drawn to sunny beaches, historic cities, delicious food, or vibrant nightlife  Greece offers a variety of ways to enjoy your free time.</p><p>If you're looking for a job that gives you the chance to work in a multicultural environment  and you also want to enjoy a high quality of life in a Mediterranean country that balances work, culture, and leisure  this Customer Service Representative role in Greece could be a great fit.</p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+      "pubDate": 1791860396,
+      "expiryDate": 1797044395,
+      "applicationLink": "https://himalayas.app/companies/nordic-recruiters/jobs/customer-service-representative-dutch-remote-greece",
+      "guid": "https://himalayas.app/companies/nordic-recruiters/jobs/customer-service-representative-dutch-remote-greece"
+    },
+    {
+      "title": "Application Security Engineer AppSec",
+      "excerpt": "About BJAKThe original mission of BJAK is we believe people deserve smarter ways to plan, save and grow their money.",
+      "companyName": "Bjak",
+      "companySlug": "bjak",
+      "companyLogo": "https://cdn-images.himalayas.app/8ub8wtihrfrm3vfivlkcojai4np3",
+      "employmentType": "Full Time",
+      "minSalary": null,
+      "maxSalary": null,
+      "salaryPeriod": "annual",
+      "seniority": [
+        "Mid-level"
+      ],
+      "currency": null,
+      "locationRestrictions": [
+        "China"
+      ],
+      "timezoneRestrictions": [
+        6,
+        8
+      ],
+      "categories": [
+        "Application-Security-Engineer",
+        "AppSec-Engineer",
+        "Application-Security-Analyst",
+        "Application-Security-Specialist",
+        "Application-Security-Engineering",
+        "AppSec-Engineering",
+        "Security-Engineer"
+      ],
+      "parentCategories": [
+        "Developer"
+      ],
+      "description": "<h3><strong>About BJAK</strong></h3><p>The original mission of BJAK is we believe people deserve smarter ways to plan, save and grow their money. This is the origin of our name.</p><p>Started in 2019, we built the first mobile-first, insurance platform, enabling insurance to be accessible online by millions in the region. Today, its the leading insurance platform in Southeast Asia.</p><p>Today, we are expanding ways to help people in the region \u2014 this includes spending, saving, investing, exchanging, travelling, and more. Our mission is help people get more from their money every day.</p><p>We have teams working around the world, with over 20 nationalities from our offices and remotely, who truly enjoys their work. We are looking for the most talented and driven people we can find. We are looking for people who work for their passion, not counting hours. Who loves building great next-generation products, not status quo. Who cares about redefining how everyone around us can get the best financial applications, not for an exclusive few.</p><p>If you're this person, we'd love to talk to you.</p><h3>The Role</h3><p>Secure BJAK's web applications, APIs, and backend services, coordinating with mobile stakeholders on cross-platform risks. Embed security into design, development, testing, and release workflows.</p><h3>What You Will Build</h3><ul>\n<li><p>Perform security reviews, code reviews, and testing for web applications, APIs, and backend services.</p></li>\n<li><p>Identify, prioritize, and help remediate injection, broken access control, authentication, and configuration vulnerabilities.</p></li>\n<li><p>Integrate SAST, DAST, software composition analysis, and secrets scanning into CI/CD pipelines.</p></li>\n<li><p>Conduct threat modeling and design reviews for features, APIs, third-party integrations, and major changes.</p></li>\n<li><p>Coordinate with mobile engineers on cross-platform findings and backend controls protecting native iOS and Android clients.</p></li>\n<li><p>Own application security implementation for SC TRM and BNM RMiT, including secure SDLC evidence, vulnerability management, testing, and audit remediation.</p></li>\n<li><p>Provide secure coding guidance, track remediation, retest fixes, and improve developer security awareness.</p></li>\n</ul><h3>What We Look For</h3><ul>\n<li><p>Degree in Computer Science, Cybersecurity, or related discipline, or equivalent experience.</p></li>\n<li><p>3+ years in application security, penetration testing, or secure software development.</p></li>\n<li><p>Experience implementing and owning SC TRM and BNM RMiT application security and secure SDLC requirements.</p></li>\n<li><p>Strong understanding of OWASP Top 10, OWASP API Security Top 10, web vulnerabilities, API security, and secure design.</p></li>\n<li><p>Hands-on experience with Burp Suite, OWASP ZAP, SAST, DAST, and dependency scanning tools.</p></li>\n<li><p>Experience reviewing TypeScript/Node.js and Python services; familiarity with Swift, Kotlin, AWS, and GCP.</p></li>\n<li><p>Able to work closely with developers, explain findings, and support remediation.</p></li>\n</ul><h3><strong>Language</strong></h3><p>English is our main working language across global teams. Strong English communication is required.</p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+      "pubDate": 1791860351,
+      "expiryDate": 1797044350,
+      "applicationLink": "https://himalayas.app/companies/bjak/jobs/application-security-engineer-appsec-3876795627",
+      "guid": "https://himalayas.app/companies/bjak/jobs/application-security-engineer-appsec-3876795627"
+    },
+    {
+      "title": "Senior Account Manager",
+      "excerpt": "About AMZ Advisers:AMZ Advisers is a digital media marketing agency focused on developing and implementing strategic marketing plans for the global Amazon marketplaces.",
+      "companyName": "AMZ Advisers",
+      "companySlug": "amz-advisers",
+      "companyLogo": "https://cdn-images.himalayas.app/wd7hgjl8521uvxmm3227ss2r9kac",
+      "employmentType": "Full Time",
+      "minSalary": null,
+      "maxSalary": null,
+      "salaryPeriod": "annual",
+      "seniority": [
+        "Senior"
+      ],
+      "currency": null,
+      "locationRestrictions": [
+        "Netherlands"
+      ],
+      "timezoneRestrictions": [
+        1
+      ],
+      "categories": [
+        "Senior-Account-Manager",
+        "Account-Manager",
+        "E-Commerce-Account-Manager",
+        "Digital-Marketing-Manager",
+        "Customer-Success-Manager",
+        "Senior-Account-Management",
+        "Key-Account-Manager",
+        "Senior-National-Account-Manager"
+      ],
+      "parentCategories": [
+        "Sales",
+        "Marketing",
+        "Customer Service"
+      ],
+      "description": "<h3>About <a href=\"https://himalayas.app/companies/amz-advisers\">AMZ Advisers</a>:</h3><p><a href=\"https://himalayas.app/companies/amz-advisers\">AMZ Advisers</a> is a digital media marketing agency focused on developing and implementing strategic marketing plans for the global Amazon marketplaces. Working at <a href=\"https://himalayas.app/companies/amz-advisers\">AMZ Advisers</a> allows you to apply your skills, expertise, and passions to directly impact the lives and business of other people and entrepreneurs. Our staff solves dynamic, quickly evolving problems with our Founders, in-house team, and network of partnered tech companies.  Our Account Management team is organized into pods, consisting of Senior Account Managers (SAMs), Junior Account Managers (JAMs), and Apprentices and Interns.  This structure fosters knowledge sharing, mentorship, and continuous learning.</p><h3>About the Role:</h3><p>We\u2019re seeking a driven and self-motivated problem solver with exceptionally strong communication skills and the ability to build long-lasting client relationships.  We offer a fast-paced, challenging, and creative environment where you will be provided the opportunity to sharpen your analytical, communication, and strategic development skills.  You will be offered resources and growth opportunities to learn more about online marketing to enhance your professional career.</p><p>The ideal candidate is an independent thinker who can confidently manage multiple Amazon Seller and Vendor Central accounts while leading client relationships with a high level of ownership and professionalism. As an Account Manager, this person will be responsible for building strong strategies, guiding clients through clear and proactive communication, and ensuring their portfolio is progressing toward the right goals. They should be comfortable working closely with their Brand Strategist and cross-functional pod members, while taking the lead on day-to-day account direction, strategic execution, and client success.</p><p>This is a fully remote position.  If hired, you will join a company with an amazing and talented staff. </p><h3>What You\u2019ll Do:</h3><h3><strong>General Responsibilities</strong></h3><ul>\n<li><p>Manage a portfolio of clients, gradually growing to approximately 10 accounts, while maintaining a high retention rate.</p></li>\n<li><p>Build strong, long-term client relationships through clear, proactive, and confident communication.</p></li>\n<li><p>Serve as the primary point of contact for clients, ensuring they feel informed, supported, and strategically guided at all times.</p></li>\n<li><p>Set clear expectations with clients and manage those expectations throughout the lifecycle of the account.</p></li>\n<li><p>Conduct regular strategy calls with clients to review performance, communicate progress, explain results, and align on upcoming priorities.</p></li>\n<li><p>Build, track, and monitor KPIs for all accounts under personal portfolio management.</p></li>\n<li><p>Conduct audits of client accounts and use data to identify opportunities, blockers, and areas for improvement.</p></li>\n<li><p>Develop strategic growth plans tailored to each client\u2019s goals, lifecycle stage, and account conditions.</p></li>\n<li><p>Proactively identify and recommend strategies to improve account performance across sales, traffic, conversion, profitability, inventory, content, and advertising.</p></li>\n<li><p>Report on account progress, key action items, and next-step priorities in a clear and organized way.</p></li>\n<li><p>Plan, coordinate, and oversee promotions, launches, and marketplace initiatives in alignment with the broader account strategy.</p></li>\n<li><p>Coordinate the resolution of account issues by working with internal teams and escalating through the appropriate channels when needed.</p></li>\n<li><p>Use internal and external software tools to analyze account performance and support strategy development.</p></li>\n<li><p>Work cross-functionally with Ads, Specialists, Content, Onboarding, and Strategists to ensure strategies are executed effectively and aligned to client goals.</p></li>\n<li><p>Attend Account Management meetings, trainings, and ongoing development sessions on a weekly or bi-weekly basis.</p></li>\n<li><p>Participate in daily stand-up meetings to raise blockers, align on priorities, and maintain execution momentum.</p></li>\n</ul><h3><strong>Strategy Ownership</strong></h3><ul>\n<li><p>Conduct account audits and turn findings into clear, actionable strategies.</p></li>\n<li><p>Build client strategies based on data, marketplace trends, account health, business goals, and realistic opportunity areas.</p></li>\n<li><p>Understand how to prioritize focus SKUs based on performance, profitability, traffic potential, conversion, and growth opportunity.</p></li>\n<li><p>Adjust strategies as needed based on data, seasonality, competitive changes, and evolving client objectives.</p></li>\n<li><p>Ensure every recommendation has a clear reason behind it and can be explained confidently to the client.</p></li>\n</ul><h3><strong>Advertising &amp; Amazon Knowledge</strong></h3><ul>\n<li><p>Maintain a strong working knowledge of Amazon as a whole, including traffic, conversion, listing quality, profitability, inventory, account health, and category dynamics.</p></li>\n<li><p>Understand Amazon advertising strategy well enough to contribute meaningfully to planning, decision-making, and client communication.</p></li>\n<li><p>Be able to interpret ad performance, identify high-level opportunities or inefficiencies, and connect advertising decisions to the broader business strategy.</p></li>\n<li><p>Work closely with the Ads team and Strategist to align ad direction with overall account goals, whether those goals are growth, profitability, ranking, launch velocity, or market share.</p></li>\n<li><p>Communicate ad strategy and performance to clients in a way that is clear, accurate, and tied back to business outcomes.</p></li>\n</ul><h3><strong>Pod Collaboration</strong></h3><ul>\n<li><p>Work closely with the Brand Strategist within the pod to refine account strategy, validate recommendations, and escalate higher-level concerns when needed.</p></li>\n<li><p>Collaborate with pod members regularly through meetings, brainstorming sessions, and strategy discussions.</p></li>\n<li><p>Keep internal teams aligned by ensuring priorities, deadlines, and strategic direction are clearly communicated.</p></li>\n<li><p>Support a collaborative pod environment where ideas, blockers, and opportunities are surfaced early.</p></li>\n</ul><h3><strong>Client Communication &amp; Relationship Management</strong></h3><ul>\n<li><p>Lead proactive, transparent, and solutions-oriented communication with clients.</p></li>\n<li><p>Build trust by not only reporting on what happened, but clearly explaining why it happened, what it means, and what should happen next.</p></li>\n<li><p>Be able to handle difficult conversations, performance concerns, and conflicting client goals with confidence and professionalism.</p></li>\n<li><p>Guide clients toward the right strategic decisions, even when those decisions require pushback or expectation resetting.</p></li>\n<li><p>Ensure clients feel that their accounts are being actively managed, thoughtfully reviewed, and strategically guided.</p></li>\n<li><p>Encourage client feedback and use it to strengthen the relationship and improve the service experience.</p></li>\n<li><p>Help identify retention risks early and take action before they become larger client issues.</p></li>\n</ul><h3><strong>Check-ins, Accountability &amp; Growth Opportunities</strong></h3><ul>\n<li><p>Regularly review account progress and raise issues, risks, or missed opportunities early.</p></li>\n<li><p>Stay proactive in identifying upsell and expansion opportunities where appropriate.</p></li>\n<li><p>Take ownership of account outcomes and maintain strong follow-through on action items.</p></li>\n<li><p>Continuously look for ways to improve account performance, internal processes, and the client experience.</p></li>\n</ul><h3>How We\u2019ll Measure Success</h3><ul>\n<li><p>Retention Rate - Percentage of retained clients from month to month.</p></li>\n<li><p>Blocker/ Conflict Resolution Time - Monitor and decrease the time taken to resolve client issues or blockers.</p></li>\n<li><p>Client Communication - Assess the quality and frequency of client interactions for improved satisfactions.</p></li>\n<li><p>Strategy Effectiveness - Evaluate the success of client strategies considering feedback and performance metrics.</p></li>\n</ul><h3>Qualifications:</h3><ul>\n<li><p>BA in Marketing, Business Development, Management, or other related studies.</p></li>\n<li><h3>2+ years with client account management.</h3></li>\n<li><p>2+ years digital marketing or eCommerce experience.</p></li>\n<li><p>1+ year experience with Amazon Seller and or Vendor Central.</p></li>\n<li><p>Ability to build and maintain client relations.</p></li>\n<li><p>Active listening and the ability to understand client needs.</p></li>\n<li><p>Proactive, go-getter mindset who functions well within a team setting but can work independently.</p></li>\n<li><p>Strong ability to think outside the box, willingness to test new ideas, and develop and implement growth strategies.</p></li>\n<li><p>Strong time management skills and the ability to multitask.</p></li>\n<li><h3>Ability and desire to learn new skills.</h3></li>\n</ul><h3>Technologies We Use:</h3><ul>\n<li><p>G-Suite: Gmail, Google Drive, Google Meets, Google Docs, Sheets, and Slides</p></li>\n<li><h3>Microsoft: Word, Excel, and PowerPoint</h3></li>\n<li><h3>ClickUp</h3></li>\n<li><h3>Nordpass</h3></li>\n<li><h3>Slack</h3></li>\n<li><h3>Sellerboard</h3></li>\n<li><h3>Data Dive</h3></li>\n<li><h3>Zoom</h3></li>\n</ul><h3>To Apply Please Include the Following:</h3><ul>\n<li><p>Your CV/ Resume in English (ONLY English Resumes will be considered)</p></li>\n<li><p>Two references who can attest to your competency in this line of work</p></li>\n<li>Answers to the following questions:<ul>\n<li><p>Describe your experience with Amazon Seller or Vendor Central.</p></li>\n<li><p>Do you have any experience leading a team?</p></li>\n<li><p>Why are you interested in a new job/ this position?</p></li>\n<li><p>Describe a situation in your career in which you were faced with a challenging problem and how you overcame it.</p></li>\n</ul>\n</li>\n</ul><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+      "pubDate": 1791860270,
+      "expiryDate": 1797044269,
+      "applicationLink": "https://himalayas.app/companies/amz-advisers/jobs/senior-account-manager-9870356264",
+      "guid": "https://himalayas.app/companies/amz-advisers/jobs/senior-account-manager-9870356264"
+    },
+    {
+      "title": "Quality Assurance",
+      "excerpt": "Job Title: Quality Assurance (QA) Engineer Location: Remote (U.",
+      "companyName": "Everglade Works",
+      "companySlug": "everglade-works",
+      "companyLogo": "https://cdn-images.himalayas.app/1qtjaypqxrt879c3o3hepfqpz6s6",
+      "employmentType": "Full Time",
+      "minSalary": null,
+      "maxSalary": null,
+      "salaryPeriod": "annual",
+      "seniority": [
+        "Mid-level"
+      ],
+      "currency": null,
+      "locationRestrictions": [
+        "United States"
+      ],
+      "timezoneRestrictions": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        14
+      ],
+      "categories": [
+        "QA-Engineer",
+        "Quality-Assurance-Engineer",
+        "Software-QA-Engineer",
+        "Test-Engineer",
+        "Quality-Assurance",
+        "Quality-Control-And-Quality-Assurance",
+        "Product-Quality-Assurance",
+        "Quality-Assurance-Compliance",
+        "Quality-Assurance-and-Quality-Control-(QA-QC)"
+      ],
+      "parentCategories": [
+        "Developer"
+      ],
+      "description": "<p>Job Title: Quality Assurance (QA) Engineer</p><h3>Location: Remote (U.S. Applicants Only)</h3><h3>Company: <a href=\"https://himalayas.app/companies/everglade-works\">Everglade Works</a>\n</h3><p>Type: Full-Time | Remote | Competitive Benefits</p><h3>About <a href=\"https://himalayas.app/companies/everglade-works\">Everglade Works</a>\n</h3><p><a href=\"https://himalayas.app/companies/everglade-works\">Everglade Works</a> is a multi-billion-dollar tech company building advanced software solutions for industries across the United States and beyond. Our expertise lies in providing businesses with reliable, scalable, and secure tech infrastructures that drive growth. As a remote-first company, we offer our team members flexibility and autonomy to thrive while contributing to the company's dynamic growth. At <a href=\"https://himalayas.app/companies/everglade-works\">Everglade Works</a>, we value collaboration, innovation, and a commitment to excellence in every aspect of our work.</p><h3>About the Role</h3><p>We are looking for a Quality Assurance (QA) Engineer to join our team and play a crucial role in ensuring the quality and reliability of our software products. As a QA Engineer at <a href=\"https://himalayas.app/companies/everglade-works\">Everglade Works</a>, you'll be responsible for testing, identifying bugs, and ensuring that our products meet the highest standards of quality before they reach the market. This is an opportunity to work in a dynamic and fast-paced environment where attention to detail and a passion for product excellence are paramount.  </p><p>You will work closely with developers, product managers, and other teams to ensure that our solutions are seamless, secure, and bug-free. This position allows you to have a direct impact on the user experience, shaping the quality of products that are used by businesses across multiple industries.</p><h3>What You'll Be Doing</h3><ul>\n<li>Design, create, and execute manual and automated tests for new and existing features of our software products  </li>\n<li>Collaborate with product teams to define test plans and acceptance criteria  </li>\n<li>Perform regression testing and validate bug fixes and new features  </li>\n<li>Identify and document defects, track them through the lifecycle, and ensure timely resolution  </li>\n<li>Develop and maintain test scripts, test cases, and test documentation  </li>\n<li>Participate in code reviews to ensure that testability is considered during development  </li>\n<li>Monitor software performance, track issues, and report trends related to quality  </li>\n<li>Ensure proper coverage of test cases and assist in verifying release readiness  </li>\n<li>Investigate and troubleshoot issues, replicating customer environments to test thoroughly  </li>\n<li>Collaborate cross-functionally to enhance product quality throughout the development process  </li>\n<li>Provide feedback to the development team and contribute to continuous quality improvement</li>\n</ul><h3>You'll Excel in This Role If You</h3><ul>\n<li>Have 2+ years of experience in a QA Engineering role (manual and automated testing)  </li>\n<li>Are proficient in QA tools (Selenium, Cypress, Postman, JIRA, TestRail, etc.)  </li>\n<li>Have hands-on experience writing test scripts and creating test cases for web and mobile applications  </li>\n<li>Possess a strong understanding of software development lifecycles (SDLC)  </li>\n<li>Have experience with API testing and working with RESTful services  </li>\n<li>Are familiar with version control (Git, GitHub)  </li>\n<li>Know how to identify and analyze performance bottlenecks</li>\n<li>Have strong troubleshooting skills and a problem-solving mindset</li>\n<li>Are familiar with Agile methodologies (Scrum, Kanban, etc.) and work in fast-paced environments  </li>\n<li>Have excellent communication skills to report defects, bugs, and issues in a clear and concise manner  </li>\n<li>Bonus: Experience with performance testing and security testing</li>\n</ul><h3>What's In It for You</h3><p>At <a href=\"https://himalayas.app/companies/everglade-works\">Everglade Works</a>, we believe in rewarding our team members for their hard work and dedication. Here's a snapshot of what you'll enjoy as part of our team:</p><h3>Financial &amp; Career Growth</h3><ul>\n<li>Competitive salary with annual performance-based raises</li>\n<li>Performance bonuses and company profit-sharing opportunities  </li>\n<li>Paid training, certifications, and professional development support  </li>\n<li>Clear career development pathway with internal growth opportunities  </li>\n</ul><h3>Health &amp; Well-being</h3><ul>\n<li>Comprehensive health, dental, and vision coverage</li>\n<li>Access to mental health support, including therapy stipends and wellness programs  </li>\n<li>Flexible hours with a healthy work-life balance</li>\n<li>Paid time off, paid holidays, and generous parental leave  </li>\n</ul><h3>Work-Life Balance</h3><ul>\n<li>100% remote-first position work from anywhere in the U.S.  </li>\n<li>Flexible working hours we focus on results, not clocking in/out  </li>\n</ul><h3>- Paid vacation days and holidays</h3><h3>Extras</h3><ul>\n<li>Company-wide virtual team events and occasional in-person meetups  </li>\n<li>Tech equipment stipend to create your ideal home office setup  </li>\n</ul><h3>- Access to co-working space memberships</h3><h3>- Generous employee referral program</h3><ul>\n<li>Employee discounts and wellness programs  </li>\n</ul><h3> How to Apply</h3><p>If you're passionate about quality, testing, and product excellence and want to be part of a fast-growing tech company, we want to hear from you. Apply now to take the next step in your career with <a href=\"https://himalayas.app/companies/everglade-works\">Everglade Works</a> and help us deliver high-quality, innovative products to businesses that need them.</p><p><a href=\"https://himalayas.app/companies/everglade-works\">Everglade Works</a> is an equal opportunity employer. We believe in building a diverse, inclusive team, and we encourage applicants from all backgrounds to apply.</p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+      "pubDate": 1791860209,
+      "expiryDate": 1797044208,
+      "applicationLink": "https://himalayas.app/companies/everglade-works/jobs/quality-assurance",
+      "guid": "https://himalayas.app/companies/everglade-works/jobs/quality-assurance"
+    },
+    {
+      "title": "Remote Cruise and Hotel Booker- Entry",
+      "excerpt": "We know that the world is filled with incredible destinations waiting to be explored, and we're here to make those journeys extraordinary.",
+      "companyName": "Never Ending Travels",
+      "companySlug": "never-ending-travels",
+      "companyLogo": "https://cdn-images.himalayas.app/3b0yw4dlop498mwb51xc5nukbwsl",
+      "employmentType": "Full Time",
+      "minSalary": 47000,
+      "maxSalary": 63000,
+      "salaryPeriod": "annual",
+      "seniority": [
+        "Entry-level"
+      ],
+      "currency": "USD",
+      "locationRestrictions": [
+        "United States"
+      ],
+      "timezoneRestrictions": [
+        -10,
+        -9,
+        -8,
+        -7,
+        -6,
+        -5,
+        14
+      ],
+      "categories": [
+        "Travel-Consultant",
+        "Cruise-Specialist",
+        "Resort-Bookings",
+        "Leisure-Travel-Consultant",
+        "Remote-Travel-Agent",
+        "Remote-Travel-Booking-Specialist",
+        "Remote-Reservationist",
+        "Remote-Reservations-Agent",
+        "Travel-Booker",
+        "Cruise-Booking",
+        "Remote-Reservations-Specialist"
+      ],
+      "parentCategories": [],
+      "description": "<p>We know that the world is filled with incredible destinations waiting to be explored, and we're here to make those journeys extraordinary. We're seeking a passionate and detail-oriented individual to join our team as a Remote Resort and Cruise Booker. If you have a love for leisure travel, a knack for crafting memorable experiences, and the desire to create dream vacations, we invite you to embark on a unique journey with us.  This is fully remote and we provide training.</p><h3>Key Responsibilities</h3><p>1. Client-Centric Excellence - Deliver exceptional customer service by understanding clients' desires and crafting personalized resort and cruise experiences that go above and beyond their expectations.</p><p>2. Travel Insight - Stay up-to-date on the latest trends in resort and cruise travel, sharing your knowledge and excitement to inspire clients.</p><p>3. Tailored Escapes - Craft customized vacation packages, combining resort stays, cruise adventures, onshore activities, dining, and more to create seamless, unforgettable journeys.</p><p>4. Booking Expertise - Manage all reservations, from cruise bookings and resort accommodations to transfers and shore excursions, ensuring each detail is meticulously organized.</p><p>5. Solutions Navigator - Seamlessly handle any travel challenges, providing quick, creative solutions to keep clients' vacations running smoothly.</p><p>6. Elevated Experiences - Suggest distinctive enhancements and unique experiences that elevate each resort stay and cruise adventure to the extraordinary.</p><h3>Qualifications</h3><p>Leisure Travel Enthusiast - A deep passion for resort getaways, cruise adventures, and the desire to inspire others to explore the world.</p><p>Effective Communication - Strong written and verbal communication skills, with an emphasis on active listening and clear articulation.</p><p>Client Focus - A commitment to providing exceptional service and exceeding client expectations.</p><p>Organized Precision - The ability to manage multiple client requests and bookings with meticulous attention to detail.</p><p>Remote Work Proficiency - Comfortable working efficiently in a remote work environment.</p><h3>Benefits</h3><h3>Full training and support</h3><p>Work remotely, allowing you to achieve work-life balance.</p><p>A supportive and collaborative team that values your contributions.</p><p>Exclusive travel perks and discounts for your own remarkable getaways.</p><h3>IATA cards provided for qualified agents</h3><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+      "pubDate": 1791860176,
+      "expiryDate": 1797044176,
+      "applicationLink": "https://himalayas.app/companies/never-ending-travels/jobs/remote-cruise-and-hotel-booker-entry",
+      "guid": "https://himalayas.app/companies/never-ending-travels/jobs/remote-cruise-and-hotel-booker-entry"
+    }
+  ]
+}
