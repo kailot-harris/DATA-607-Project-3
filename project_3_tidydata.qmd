@@ -1,0 +1,496 @@
+---
+title: "DATA 607 - Project 3"
+author: "Quarto Pounders with Cheese: Kailot C. Harris, Dillon Leeper, Esra Dogan, Nick Weiner"
+format:
+  html:
+    toc: true
+    df-print: paged
+editor: visual
+---
+
+This document covers the data import and tidying part of Project 3. It prepares two datasets for analysis: job postings from October 2026, collected by Kailot's pipeline, and Luke Barousse's 2023 data_jobs dataset for historical comparison. Both are stored in our shared PostgreSQL database.
+
+```{r}
+#| label: setup
+#| message: false
+
+library(tidyverse)
+
+fmt <- function(x) format(x, big.mark = ",")
+```
+
+## Importing the Data
+
+Login details are read from a local `.Renviron` file, so no password appears in this document. Because the pipeline adds new postings every day, I pulled the tables once on October 22, 2026 and saved them as local snapshots. All steps below use these snapshots, so the results stay the same each time the document is rendered. The chunk below is not run when the document is rendered; it shows how the snapshots were created.
+
+```{r}
+#| label: import-from-database
+#| eval: false
+
+library(DBI)
+library(RPostgres)
+
+con <- dbConnect(
+  Postgres(),
+  host     = Sys.getenv("DB_HOST"),
+  dbname   = Sys.getenv("DB_NAME"),
+  port     = 5432,
+  user     = Sys.getenv("DB_USER"),
+  password = Sys.getenv("DB_PASSWORD"),
+  sslmode  = "require"
+)
+
+dir.create("data", showWarnings = FALSE)
+
+# 2026 postings
+tables <- c("sources", "companies", "jobs", "tags", "job_tags")
+raw <- map(set_names(tables), ~ dbReadTable(con, .x))
+saveRDS(raw, "data/raw_snapshot_2026-10-22.rds")
+
+# 2023 Barousse data (only the columns we need)
+barousse <- list(
+  jobs = dbGetQuery(con, "
+    SELECT job_id, row_fingerprint::text AS row_fingerprint,
+           job_title_short, job_title, job_location, job_country,
+           job_posted_date, job_work_from_home, salary_year_avg, company_name
+    FROM barousse_jobs"),
+  skills     = dbReadTable(con, "barousse_skills"),
+  job_skills = dbReadTable(con, "barousse_job_skills")
+)
+saveRDS(barousse, "data/barousse_snapshot_2026-10-22.rds")
+
+dbDisconnect(con)
+```
+
+
+
+```{r}
+#| label: load-snapshot
+
+raw      <- readRDS("data/raw_snapshot_2026-10-22.rds")
+barousse <- readRDS("data/barousse_snapshot_2026-10-22.rds")
+
+map_int(raw, nrow)
+map_int(barousse, nrow)
+```
+
+
+## First Look at the Jobs Table
+
+```{r}
+#| label: glimpse-jobs
+
+glimpse(raw$jobs)
+```
+
+**Note:** `posted_date` is stored as text in mixed formats, salaries are mostly missing, and `remote_type` uses "unspecified" instead of NA.
+
+## Sources and Relevance of Postings
+
+```{r}
+#| label: sources
+
+jobs_raw_src <- raw$jobs |>
+  left_join(raw$sources |> select(source_id, source = name), by = "source_id")
+
+# Postings by source
+by_source <- jobs_raw_src |>
+  count(source, sort = TRUE) |>
+  mutate(share = round(n / sum(n) * 100, 1))
+
+by_source
+
+arbeitnow_share <- by_source |> filter(source == "arbeitnow") |> pull(share)
+
+# Titles containing a data-related term, by source
+data_pattern <- regex(
+  "data|analy|scien|machine learning|\\bml\\b|\\bai\\b|\\bki\\b|statistic|business intelligence|\\bbi\\b",
+  ignore_case = TRUE
+)
+
+title_flags <- jobs_raw_src |>
+  mutate(is_data_role = str_detect(title, data_pattern))
+
+title_flags |>
+  count(source, is_data_role) |>
+  pivot_wider(names_from = is_data_role, values_from = n, values_fill = 0)
+
+pct_data_title <- round(mean(title_flags$is_data_role, na.rm = TRUE) * 100)
+```
+
+**Note:** Arbeitnow provides `r round(arbeitnow_share)`% of all postings. Only about `r pct_data_title`% of postings with a title look data-related, so many postings are not data jobs. HN Hiring postings have no title.
+
+## Duplicates
+
+Postings with the same title, company, and location are treated as one job posted more than once. Titles and locations are compared in lowercase without extra spaces. The same title in different locations is kept, since these are separate openings.
+
+```{r}
+#| label: duplicates
+
+# Same posting from the same source (same source_id + external_id)
+n_same_source <- raw$jobs |>
+  count(source_id, external_id) |>
+  filter(n > 1) |>
+  nrow()
+
+n_same_source
+
+# Normalized title and location for comparison
+norm <- function(x) str_to_lower(str_squish(x))
+
+# Repeated title + company: same or different location? same or different source?
+raw$jobs |>
+  filter(!is.na(title), !is.na(company_id)) |>
+  group_by(title_key = norm(title), company_id) |>
+  filter(n() > 1) |>
+  summarise(
+    sources   = n_distinct(source_id),
+    locations = n_distinct(norm(location)),
+    .groups   = "drop"
+  ) |>
+  count(same_location = locations == 1, cross_source = sources > 1)
+
+# Remove duplicates; postings without title or company are never treated as duplicates
+jobs <- raw$jobs |>
+  mutate(dup_key = if_else(
+    !is.na(title) & !is.na(company_id),
+    paste(norm(title), company_id, norm(location)),
+    as.character(job_id)
+  )) |>
+  arrange(job_id) |>
+  distinct(dup_key, .keep_all = TRUE) |>
+  select(-dup_key)
+
+n_dup <- nrow(raw$jobs) - nrow(jobs)
+```
+
+**Note:** `r n_same_source` postings were stored twice with the same source and external ID. `r fmt(n_dup)` duplicate postings were removed (`r fmt(nrow(jobs))` remain).
+
+## Dates
+
+Each source stores dates differently. Most use a standard format, but Himalayas uses Unix time (seconds since 1970) and WWR uses the RSS format, so these two are converted separately. Postings that were more than 90 days old when they were collected are removed as outdated.
+
+```{r}
+#| label: dates
+
+jobs <- jobs |>
+  left_join(raw$sources |> select(source_id, source = name), by = "source_id") |>
+  mutate(
+    posted_at = suppressWarnings(case_when(
+      source == "himalayas" ~ as_datetime(as.numeric(posted_date)),
+      source == "wwr"       ~ parse_date_time(posted_date, "a, d b Y HMS z",
+                                              locale = "C", quiet = TRUE),
+      TRUE                  ~ ymd_hms(posted_date, quiet = TRUE)
+    )),
+    retrieved_at = ymd_hms(retrieved_at, quiet = TRUE)
+  )
+
+# Any dates left unparsed, and the overall range
+sum(is.na(jobs$posted_at))
+range(jobs$posted_at, na.rm = TRUE)
+
+oldest_date <- min(jobs$posted_at, na.rm = TRUE)
+pct_oct     <- round(mean(format(jobs$posted_at, "%Y-%m") == "2026-10", na.rm = TRUE) * 100)
+
+# Remove stale postings (older than 90 days at retrieval)
+jobs <- jobs |>
+  mutate(age_days = as.numeric(difftime(retrieved_at, posted_at, units = "days")))
+
+n_stale <- sum(jobs$age_days > 90, na.rm = TRUE)
+
+# Keep postings with an unknown date; only remove those known to be stale
+jobs <- jobs |> filter(is.na(age_days) | age_days <= 90)
+```
+
+**Note:** `r pct_oct`% of postings are from October 2026. `r fmt(n_stale)` postings older than 90 days at retrieval were removed as stale (the oldest was posted on `r format(oldest_date, "%Y-%m-%d")`). Postings without a parseable date are kept.
+
+## Missing Values
+
+```{r}
+#| label: missing-values
+
+# Share of missing values in each column (%)
+missing_tbl <- jobs |>
+  summarise(across(everything(), ~ round(mean(is.na(.)) * 100, 1))) |>
+  pivot_longer(everything(), names_to = "column", values_to = "pct_missing") |>
+  arrange(desc(pct_missing))
+
+missing_tbl
+
+pct_salary_na <- missing_tbl |> filter(column == "salary_min") |> pull(pct_missing)
+
+# Where do postings without a title come from?
+jobs |> filter(is.na(title)) |> count(source)
+
+# Label missing location and remote type as "unknown"
+jobs <- jobs |>
+  mutate(
+    location    = replace_na(location, "unknown"),
+    remote_type = if_else(
+      is.na(remote_type) | remote_type == "unspecified",
+      "unknown",
+      str_to_lower(str_trim(remote_type))
+    )
+  )
+
+jobs |> count(remote_type, sort = TRUE)
+
+pct_remote_unknown <- round(mean(jobs$remote_type == "unknown") * 100)
+```
+
+**Note:** Salaries are missing for `r pct_salary_na`% of postings and are kept as NA rather than estimated. Postings without a title come from HN Hiring (see the table above); they are kept because skills are taken from the description. Missing location and missing or "unspecified" remote type are labeled "unknown".
+
+## Skills
+
+### Tags
+
+```{r}
+#| label: tags
+
+job_tags <- raw$job_tags |>
+  inner_join(raw$tags, by = "tag_id") |>
+  semi_join(jobs, by = "job_id")
+
+# Most common tags
+job_tags |>
+  count(tag_name, sort = TRUE) |>
+  slice_head(n = 10)
+
+# Quick check: do any tags contain common skill names?
+# "|" means "or"; "^r$" matches a tag that is exactly "r"
+skill_like <- regex(
+  "python|sql|tableau|excel|power ?bi|aws|azure|spark|machine learning|pytorch|tensorflow|^r$",
+  ignore_case = TRUE
+)
+
+job_tags |>
+  filter(str_detect(tag_name, skill_like)) |>
+  count(tag_name, sort = TRUE)
+```
+
+**Note:** The most common tags are job categories (such as Sales or Engineering), not technical skills, and skill names rarely appear in tags. Skills are therefore extracted from the job descriptions.
+
+### Extracting Skills from Descriptions
+
+The skill list starts from the WPI article in our approach, adds tools that are common in current postings, and uses the same skill names as the 2023 Barousse data where possible. Each skill has one search pattern that covers different spellings (for example, "sklearn" and "scikit-learn"). R, SAS, and Excel are matched only in capital letters, so the letter "r" inside words or the verb "excel" is not counted. Skills are searched in the job description, not the title, so a title like "Communications Manager" does not count as a communication skill. HTML code in the descriptions is removed before searching.
+
+```{r}
+#| label: extract-skills
+
+# Clean text: description (title only as a fallback), HTML removed
+jobs_text <- jobs |>
+  mutate(
+    text = if_else(
+      is.na(description_raw) | str_trim(description_raw) == "",
+      coalesce(title, ""),
+      description_raw
+    ),
+    text = str_replace_all(text, "&(amp;)+", "&"),
+    text = str_replace_all(text, "&lt;", "<"),
+    text = str_replace_all(text, "&gt;", ">"),
+    text = str_replace_all(text, "</?(b|i|strong|em|span|a|u)\\b[^>]*>", ""),  # inline tags
+    text = str_replace_all(text, "<[^>]+>", " "),                              # other tags
+    text = str_replace_all(text, "&[a-z]+;|&#\\d+;", " "),
+    text = str_squish(text)
+  ) |>
+  select(job_id, text)
+
+# Skill dictionary
+skills_dict <- tribble(
+  ~skill,               ~pattern,                                                       ~ignore_case,
+  "python",             "\\bpython",                                                    TRUE,
+  "r",                  "(?<![&\\w)\\-])R\\b(?!\\s?&|/3)",                              FALSE,
+  "sql",                "\\bsql\\b",                                                    TRUE,
+  "excel",              "\\bExcel\\b",                                                  FALSE,
+  "tableau",            "\\btableau\\b",                                                TRUE,
+  "power bi",           "\\bpower ?bi\\b",                                              TRUE,
+  "sas",                "\\bSAS\\b",                                                    FALSE,
+  "java",               "\\bjava\\b",                                                   TRUE,
+  "scala",              "\\bscala\\b",                                                  TRUE,
+  "aws",                "\\baws\\b|amazon web services",                                TRUE,
+  "azure",              "\\bazure\\b",                                                  TRUE,
+  "gcp",                "\\bgcp\\b|google cloud",                                       TRUE,
+  "spark",              "\\bspark\\b|pyspark",                                          TRUE,
+  "hadoop",             "\\bhadoop\\b",                                                 TRUE,
+  "snowflake",          "\\bsnowflake\\b",                                              TRUE,
+  "databricks",         "\\bdatabricks\\b",                                             TRUE,
+  "airflow",            "\\bairflow\\b",                                                TRUE,
+  "docker",             "\\bdocker\\b",                                                 TRUE,
+  "kubernetes",         "\\bkubernetes\\b|\\bk8s\\b",                                   TRUE,
+  "git",                "\\bgit\\b|github|gitlab",                                      TRUE,
+  "pandas",             "\\bpandas\\b",                                                 TRUE,
+  "numpy",              "\\bnumpy\\b",                                                  TRUE,
+  "scikit-learn",       "scikit[- ]learn|\\bsklearn\\b",                                TRUE,
+  "tensorflow",         "\\btensorflow\\b",                                             TRUE,
+  "pytorch",            "\\bpytorch\\b",                                                TRUE,
+  "machine learning",   "machine learning|\\bml\\b|maschinelles lernen",                TRUE,
+  "deep learning",      "deep learning",                                                TRUE,
+  "statistics",         "statistic|statistik",                                          TRUE,
+  "nlp",                "\\bnlp\\b|natural language processing",                        TRUE,
+  "llm / gen ai",       "\\bllms?\\b|large language model|generative ai|\\bgen ?ai\\b", TRUE,
+  "data visualization", "visuali[sz]ation",                                             TRUE,
+  "communication",      "communicat|kommunikation",                                     TRUE
+)
+
+# One row per job-skill pair
+job_skills <- pmap_dfr(skills_dict, function(skill, pattern, ignore_case) {
+  hits <- str_detect(jobs_text$text, regex(pattern, ignore_case = ignore_case))
+  tibble(job_id = jobs_text$job_id[hits], skill = skill)
+})
+
+n_with_skill <- n_distinct(job_skills$job_id)
+n_no_skill   <- nrow(jobs) - n_with_skill
+```
+
+**Note:** `r fmt(nrow(job_skills))` job-skill pairs were found. `r fmt(n_with_skill)` postings mention at least one skill and `r fmt(n_no_skill)` mention none.
+
+### Checking the R Pattern
+
+R is a single letter, so it is the pattern most likely to give false matches. I read a random sample of 30 matches in context.
+
+```{r}
+#| label: check-r
+
+r_pattern <- skills_dict |> filter(skill == "r") |> pull(pattern)
+
+set.seed(607)
+
+jobs_text |>
+  semi_join(job_skills |> filter(skill == "r"), by = "job_id") |>
+  mutate(context = str_extract(text, regex(paste0(".{0,40}", r_pattern, ".{0,40}")))) |>
+  slice_sample(n = 30) |>
+  pull(context)
+```
+
+**Note:** 27 of 30 sampled matches refer to the R language. The three errors are a rocket name (Terran R), a French job category code ("Métier R"), and the Brazilian currency symbol ("R$"). One correct match is negated ("Du musst kein R beherrschen", German for "you don't need to know R"), which shows that keyword search cannot detect negation, so some matches may overstate demand. Earlier errors from "R&D" and "SAP R/3" were fixed in the pattern.
+
+## Outliers
+
+The approach defined two kinds of outliers: postings that list an unusually large number of skills, and postings that contain none of the listed skills.
+
+```{r}
+#| label: outliers
+
+jobs <- jobs |>
+  select(-any_of(c("n_skills", "is_data_role"))) |>   # so the chunk can be re-run
+  left_join(count(job_skills, job_id, name = "n_skills"), by = "job_id") |>
+  mutate(
+    n_skills     = replace_na(n_skills, 0L),
+    is_data_role = if_else(is.na(title), NA, str_detect(title, data_pattern))
+  )
+
+# Skills per posting
+jobs |> count(n_skills)
+
+# Postings with the most skills
+jobs |>
+  slice_max(n_skills, n = 5) |>
+  select(source, title, n_skills)
+
+# Postings with no skills vs. data-related titles
+jobs |> count(is_data_role, has_skill = n_skills > 0)
+```
+
+**Note:** The postings with the most skills are technical roles that list many tools. This is not a data error, so they are kept. Postings with no skills are also kept, because they still count when calculating the share of postings that mention a skill. As the last table shows, most of them are not data roles; the `is_data_role` flag lets the analysis focus on data roles.
+
+
+## 2023 Data (Barousse)
+
+The 2023 data comes from Luke Barousse's data_jobs dataset, which Kailot loaded into our database. Its skills are already extracted into a separate table and its dates are already in date format, so this part checks for duplicates, applies the same rules as for 2026, and matches the skills to our dictionary.
+
+```{r}
+#| label: barousse
+
+b_jobs <- barousse$jobs
+
+# Exact copies (same row fingerprint)
+n_exact_dup <- sum(duplicated(b_jobs$row_fingerprint))
+
+# Date range and missing values
+range(b_jobs$job_posted_date, na.rm = TRUE)
+
+b_jobs |>
+  summarise(across(everything(), ~ round(mean(is.na(.)) * 100, 1))) |>
+  pivot_longer(everything(), names_to = "column", values_to = "pct_missing")
+
+# Remove reposts with the same rule as 2026: same title, company, and location
+n_before <- nrow(b_jobs)
+
+b_jobs <- b_jobs |>
+  mutate(dup_key = paste(norm(job_title), company_name, norm(job_location))) |>
+  arrange(job_posted_date) |>   # keep the earliest posting
+  distinct(dup_key, .keep_all = TRUE) |>
+  select(-dup_key)
+
+n_b_dup <- n_before - nrow(b_jobs)
+
+# Same data-role rule as 2026
+b_jobs <- b_jobs |> mutate(is_data_role = str_detect(job_title, data_pattern))
+
+# Skills: keep only the skills in our dictionary
+b_job_skills <- barousse$job_skills |>
+  inner_join(barousse$skills |> select(skill_id, skill), by = "skill_id") |>
+  filter(skill %in% skills_dict$skill) |>
+  semi_join(b_jobs, by = "job_id") |>
+  select(job_id, skill)
+
+b_jobs <- b_jobs |>
+  left_join(count(b_job_skills, job_id, name = "n_skills"), by = "job_id") |>
+  mutate(n_skills = replace_na(n_skills, 0L))
+
+# Which of our skills are missing from the 2023 data?
+skills_dict <- skills_dict |> mutate(in_2023 = skill %in% b_job_skills$skill)
+skills_dict |> filter(!in_2023) |> pull(skill)
+```
+
+**Note:** `r n_exact_dup` rows were exact copies. `r fmt(n_b_dup)` postings repeated the same title, company, and location and were removed with the same rule used for 2026 (`r fmt(nrow(b_jobs))` remain). `r sum(skills_dict$in_2023)` of our `r nrow(skills_dict)` skills appear in the 2023 data; the others (listed above) are concepts or soft skills that Barousse does not track, so they can only be analyzed for 2026. Barousse extracted its skills with its own method, so comparisons between the two years are approximate.
+
+## Saving the Tidy Data
+
+```{r}
+#| label: save-tidy
+
+jobs_tidy <- jobs |>
+  left_join(raw$companies |> select(company_id, company = name), by = "company_id") |>
+  select(job_id, source, external_id, company_id, company, title, location,
+         remote_type, posted_at, retrieved_at, salary_min, salary_max,
+         is_data_role, n_skills, url)
+
+jobs_2023 <- b_jobs |>
+  select(job_id, role = job_title_short, title = job_title,
+         location = job_location, country = job_country,
+         posted_at = job_posted_date, work_from_home = job_work_from_home,
+         salary_year_avg, company = company_name,
+         is_data_role, n_skills)
+
+tidy_data <- list(
+  jobs            = jobs_tidy,
+  job_skills      = job_skills,
+  jobs_2023       = jobs_2023,
+  job_skills_2023 = b_job_skills,
+  skills_dict     = skills_dict
+)
+
+saveRDS(tidy_data, "data/tidy_jobs_skills.rds", compress = "xz")
+
+map_int(tidy_data, nrow)
+anyDuplicated(jobs_tidy$job_id)   # should be 0
+```
+
+The file `data/tidy_jobs_skills.rds` contains five tables:
+
+- `jobs` and `job_skills`: the 2026 postings and their skills (one row per job-skill pair)
+- `jobs_2023` and `job_skills_2023`: the same for the 2023 Barousse data
+- `skills_dict`: the search pattern for each skill, and whether the skill exists in the 2023 data (`in_2023`)
+
+Points to keep in mind for the analysis:
+
+- Use the number of postings in `jobs` (or `jobs_2023`) as the denominator for skill shares, since postings with no skills do not appear in the skill tables.
+- Only about `r pct_data_title`% of 2026 postings with a title are data roles. `is_data_role` uses the same rule for both years; HN Hiring posts have no title, so their value is NA.
+- Arbeitnow makes up `r round(arbeitnow_share)`% of the 2026 data, so results lean toward its listings.
+- `remote_type` is "unknown" for `r pct_remote_unknown`% of 2026 postings.
+- Compare the two years only on skills where `in_2023` is TRUE. The 2023 skills were extracted with a different method, so differences are approximate.
+
+## Use of AI Tools
+
+Claude (Anthropic) was used to help write, debug, and organize the code and text in this section. All steps were run and checked by Esra Dogan.
