@@ -51,7 +51,7 @@ if ($GuardExit -eq 1) {
     exit 0
 }
 
-$Output = & $Python "src\pipeline.py" 2>&1
+$Output = & $Python "src\pipeline.py" --backend postgres 2>&1
 $ExitCode = $LASTEXITCODE
 "=== $(Get-Date -Format o) === (python: $Python)" | Out-File -FilePath $LogFile -Append -Encoding utf8
 $Output | Out-File -FilePath $LogFile -Append -Encoding utf8

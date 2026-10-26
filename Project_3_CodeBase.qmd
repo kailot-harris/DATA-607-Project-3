@@ -1191,9 +1191,16 @@ When looking at some of the more minor/auxiliary skills in Figure 4, we can see 
 
 Outside of the technical skills, the skill that prevails above all is communication. As to be expected, a data scientists role is not just to tinker around with data, but to create something meaningful or tangible from the data. The reason a data scientist is able to be paid for their work is that their work eventually leads to profitable findings. Being able to take something from a very technical, programming-focused language to a generalized and consumable message is critical to the job. This could be a reason why excel ranked much higher in 2023 than it did in 2026: Excel is a more accessible data tool for business communication.
 
-To close out our project, we wanted to look at what data science career trends looked like 10 years ago. Based on an article found on ADTMAG, The proportions of skills can be seen below.
+To close out our project, we wanted to look at what data science career trends looked like 10 years ago. Based on an article found on ADTMAG, The proportions of skills can be seen below and [here](image1.png).
 
-![](images/clipboard-3127635299.png){width="660"}
+```{r}
+#| label: fig-5
+#| fig-cap: "Proportion of Skills"
+#| out-width: "95%"
+#| fig-align: "center"
+
+knitr::include_graphics("image1.png")
+```
 
 Similar to earlier, we can see SQL, Python, R, and other various industry programs and skills. Based on these trends, its easy to see that there are certain trends in the industry that fade or grow, but the main ones that stick are the ones that are practical. The biggest "explosive" change we can observe from the last 10 years is Generative AI, and this will become one of these skills that is practical and likely will be found increasingly desired on job postings for years to come; However, behind these skills will always be the foundation not only to do the work but also to communicate it to others.
 
