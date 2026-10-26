@@ -244,7 +244,7 @@ We used GitHub for code, data, and this report, Slack for daily communication, a
 LinkedIn and Indeed restrict automated scraping, and scraping web pages breaks easily when a site changes. Instead, we collected current postings from job boards that offer official APIs or RSS feeds, which give structured, permitted access:
 
 | Source | Access | Notes |
-|------------------------|------------------------|------------------------|
+|----|----|----|
 | RemoteOK | JSON API | Remote tech jobs |
 | Arbeitnow | JSON API | Mostly European jobs, many outside data science |
 | Jobicy | JSON API | Remote jobs |
@@ -272,7 +272,7 @@ The 2023 Barousse dataset was loaded once with a separate script (`scripts/load_
 The data is stored in normalized tables, so each fact is stored once and tables are linked by IDs:
 
 | Table | One row per | Links to |
-|------------------------|------------------------|------------------------|
+|----|----|----|
 | `sources` | job board |  |
 | `companies` | company |  |
 | `jobs` | 2026 posting | `sources`, `companies` |
